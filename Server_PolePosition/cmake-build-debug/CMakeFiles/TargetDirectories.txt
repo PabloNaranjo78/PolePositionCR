@@ -1,0 +1,3 @@
+G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/Server_PolePosition/cmake-build-debug/CMakeFiles/Server_PolePosition.dir
+G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/Server_PolePosition/cmake-build-debug/CMakeFiles/edit_cache.dir
+G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/Server_PolePosition/cmake-build-debug/CMakeFiles/rebuild_cache.dir
