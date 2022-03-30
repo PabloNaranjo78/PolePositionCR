@@ -224,6 +224,12 @@ GUI_BINARY_DIR:STATIC=G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cma
 //Value Computed by CMake
 GUI_SOURCE_DIR:STATIC=G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI
 
+//The directory containing a CMake configuration file for SDL2.
+SDL2_DIR:PATH=SDL2_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for Sdl2.
+Sdl2_DIR:PATH=Sdl2_DIR-NOTFOUND
+
 
 ########################
 # INTERNAL cache entries

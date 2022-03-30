@@ -14,6 +14,7 @@ set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
+  "../SDL2-devel-2.0.20-VC/SDL2-2.0.20/include"
   )
 
 # The set of dependency files which are needed:

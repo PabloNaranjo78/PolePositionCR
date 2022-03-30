@@ -4,7 +4,7 @@
 # compile C with C:/Cpp/bin/gcc.exe
 C_DEFINES = 
 
-C_INCLUDES = 
+C_INCLUDES = @CMakeFiles/GUI.dir/includes_C.rsp
 
 C_FLAGS = -g -std=gnu11
 

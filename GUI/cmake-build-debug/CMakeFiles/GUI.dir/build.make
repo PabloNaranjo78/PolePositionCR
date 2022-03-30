@@ -66,6 +66,7 @@ include CMakeFiles/GUI.dir/progress.make
 include CMakeFiles/GUI.dir/flags.make
 
 CMakeFiles/GUI.dir/main.c.obj: CMakeFiles/GUI.dir/flags.make
+CMakeFiles/GUI.dir/main.c.obj: CMakeFiles/GUI.dir/includes_C.rsp
 CMakeFiles/GUI.dir/main.c.obj: ../main.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="G:\Mi unidad\Pablo\Lenguajes\Tareas\PolePositionCR\GUI\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/GUI.dir/main.c.obj"
 	C:\Cpp\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\GUI.dir\main.c.obj -c "G:\Mi unidad\Pablo\Lenguajes\Tareas\PolePositionCR\GUI\main.c"

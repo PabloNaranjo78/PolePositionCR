@@ -34,6 +34,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/SDL2-devel-2.0.20-VC/SDL2-2.0.20/include"/>
 					<Add directory="C:/Cpp/include"/>
 					<Add directory="c:\cpp\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/include"/>
 					<Add directory="c:\cpp\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/include-fixed"/>
@@ -53,6 +54,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/SDL2-devel-2.0.20-VC/SDL2-2.0.20/include"/>
 					<Add directory="C:/Cpp/include"/>
 					<Add directory="c:\cpp\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/include"/>
 					<Add directory="c:\cpp\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/include-fixed"/>
