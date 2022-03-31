@@ -8,5 +8,5 @@ set(SDL2_LIBRARY_DIR SDL2-devel-2.0.20-VC/SDL2-2.0.20/lib/x86)
 include_directories(${SDL2_INCLUDE_DIR})
 link_directories(${SDL2_LIBRARY_DIR})
 
-add_executable(GUI main.c)
+add_executable(GUI main.c Window/Game.c Window/GameConstantes.h)
 target_link_libraries(${PROJECT_NAME} SDL2main SDL2)

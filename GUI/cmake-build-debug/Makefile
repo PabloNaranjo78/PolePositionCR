@@ -128,6 +128,30 @@ GUI/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GUI.dir\build.make CMakeFiles/GUI.dir/build
 .PHONY : GUI/fast
 
+Window/Game.obj: Window/Game.c.obj
+.PHONY : Window/Game.obj
+
+# target to build an object file
+Window/Game.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GUI.dir\build.make CMakeFiles/GUI.dir/Window/Game.c.obj
+.PHONY : Window/Game.c.obj
+
+Window/Game.i: Window/Game.c.i
+.PHONY : Window/Game.i
+
+# target to preprocess a source file
+Window/Game.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GUI.dir\build.make CMakeFiles/GUI.dir/Window/Game.c.i
+.PHONY : Window/Game.c.i
+
+Window/Game.s: Window/Game.c.s
+.PHONY : Window/Game.s
+
+# target to generate assembly for a file
+Window/Game.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GUI.dir\build.make CMakeFiles/GUI.dir/Window/Game.c.s
+.PHONY : Window/Game.c.s
+
 main.obj: main.c.obj
 .PHONY : main.obj
 
@@ -161,6 +185,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... GUI
+	@echo ... Window/Game.obj
+	@echo ... Window/Game.i
+	@echo ... Window/Game.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

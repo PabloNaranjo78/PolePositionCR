@@ -78,6 +78,15 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/Window/Game.c">
+			<Option target="GUI"/>
+		</Unit>
+		<Unit filename="G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/Window/Game.h">
+			<Option target="GUI"/>
+		</Unit>
+		<Unit filename="G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/Window/GameConstantes.h">
+			<Option target="GUI"/>
+		</Unit>
 		<Unit filename="G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/main.c">
 			<Option target="GUI"/>
 		</Unit>

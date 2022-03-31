@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/Window/Game.c" "G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cmake-build-debug/CMakeFiles/GUI.dir/Window/Game.c.obj"
   "G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/main.c" "G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cmake-build-debug/CMakeFiles/GUI.dir/main.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")

@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/GUI.dir/Window/Game.c.obj"
   "CMakeFiles/GUI.dir/main.c.obj"
   "GUI.exe"
   "GUI.exe.manifest"
