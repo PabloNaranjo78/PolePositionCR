@@ -11,6 +11,7 @@ const int SCREEN_HEIGHT = 600;
 SDL_Window *window;
 SDL_Surface* gScreenSurface = NULL;
 SDL_Surface* gBackground = NULL;
+SDL_Surface* luigi = NULL;
 SDL_Renderer *renderer;
 SDL_Event event;
 
