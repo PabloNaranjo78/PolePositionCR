@@ -20,7 +20,7 @@ bool gameInit() {
     gScreenSurface = SDL_GetWindowSurface(window);
 
 
-    gBackground = SDL_LoadBMP("../Imagenes/mapa.bmp");
+    gBackground = SDL_LoadBMP("../Imagenes/Mapa.bmp");
     SDL_Texture *gBackgroundTexture = SDL_CreateTextureFromSurface(renderer, gBackground);
     SDL_FreeSurface(gBackground);
 
@@ -43,7 +43,7 @@ bool gameInit() {
     luiRectP.h = 30;
 
     srcRect.x = 0;
-    srcRect.y = 1200;
+    srcRect.y = 0;
     srcRect.w = SCREEN_WIDTH;
     srcRect.h = SCREEN_HEIGHT;
 
@@ -57,12 +57,12 @@ bool gameInit() {
         SDL_SetRenderDrawColor(renderer,0,0,0,SDL_ALPHA_OPAQUE);
         SDL_RenderClear(renderer);
 
-        srcRect.y -= 5;
+        srcRect.y += 600;
 
-        if (srcRect.y < 0) {
-            srcRect.y = 1200;
+       if (srcRect.y > 9000) {
+            srcRect.y = 0;
         }
-        printf("%d\n", luigiRect.x);
+        printf("%d\n", srcRect.y);
 //        SDL_BlitSurface(gBackground, &srcRect, gScreenSurface, NULL);
 //        SDL_BlitSurface(luigi, &luiRect, gScreenSurface, NULL);
 
@@ -103,7 +103,7 @@ bool gameInit() {
 
         }
 
-    SDL_Delay(10);
+    SDL_Delay(30);
     }
 
     SDL_DestroyRenderer(renderer);

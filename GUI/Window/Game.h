@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <SDL.h>
+
 #define SDL_MAIN_HANDLED
 bool gameInit();
 
