@@ -8,9 +8,11 @@ public class Deserializacion {
 
         Gson gson = new Gson();
         String json = gson.toJson(jan);
+        System.out.println(json);
 
         Informacion jan2 = gson.fromJson(json,Informacion.class);
-        jan2.printInfo();
+        System.out.printf(jan2.paquete());
+        //.printInfo();
     }
 }
 
