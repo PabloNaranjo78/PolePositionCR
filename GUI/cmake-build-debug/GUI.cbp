@@ -8,101 +8,101 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/XPC/Documents/GitHub/PolePositionCR/GUI/cmake-build-debug"/>
+				<Option working_dir="G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/Users/XPC/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/XPC/Documents/GitHub/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/Users/XPC/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/XPC/Documents/GitHub/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/XPC/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/XPC/Documents/GitHub/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/XPC/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/XPC/Documents/GitHub/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/Cpp/bin/mingw32-make.exe -f &quot;G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/Cpp/bin/mingw32-make.exe -f &quot;G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Cpp/bin/mingw32-make.exe -f &quot;G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Cpp/bin/mingw32-make.exe -f &quot;G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/XPC/Documents/GitHub/PolePositionCR/GUI/cmake-build-debug"/>
+				<Option working_dir="G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/Users/XPC/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/XPC/Documents/GitHub/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/Users/XPC/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/XPC/Documents/GitHub/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/XPC/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/XPC/Documents/GitHub/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/XPC/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/XPC/Documents/GitHub/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/Cpp/bin/mingw32-make.exe -f &quot;G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/Cpp/bin/mingw32-make.exe -f &quot;G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Cpp/bin/mingw32-make.exe -f &quot;G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Cpp/bin/mingw32-make.exe -f &quot;G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="GUI">
-				<Option output="C:/Users/XPC/Documents/GitHub/PolePositionCR/GUI/cmake-build-debug/GUI.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/XPC/Documents/GitHub/PolePositionCR/GUI/cmake-build-debug"/>
+				<Option output="G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cmake-build-debug/GUI.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/XPC/Documents/GitHub/PolePositionCR/GUI/SDL2-devel-2.0.20-VC/SDL2-2.0.20/include"/>
-					<Add directory="C:/Users/XPC/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
-					<Add directory="C:/Users/XPC/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
-					<Add directory="C:/Users/XPC/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
-					<Add directory="C:/Users/XPC/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/SDL2-devel-2.0.20-VC/SDL2-2.0.20/include"/>
+					<Add directory="C:/Cpp/include"/>
+					<Add directory="c:\cpp\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/include"/>
+					<Add directory="c:\cpp\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/include-fixed"/>
+					<Add directory="c:\cpp\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/Users/XPC/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/XPC/Documents/GitHub/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 GUI"/>
-					<CompileFile command="C:/Users/XPC/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/XPC/Documents/GitHub/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/XPC/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/XPC/Documents/GitHub/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/XPC/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/XPC/Documents/GitHub/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/Cpp/bin/mingw32-make.exe -f &quot;G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 GUI"/>
+					<CompileFile command="C:/Cpp/bin/mingw32-make.exe -f &quot;G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Cpp/bin/mingw32-make.exe -f &quot;G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Cpp/bin/mingw32-make.exe -f &quot;G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="GUI/fast">
-				<Option output="C:/Users/XPC/Documents/GitHub/PolePositionCR/GUI/cmake-build-debug/GUI.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/XPC/Documents/GitHub/PolePositionCR/GUI/cmake-build-debug"/>
+				<Option output="G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cmake-build-debug/GUI.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/XPC/Documents/GitHub/PolePositionCR/GUI/SDL2-devel-2.0.20-VC/SDL2-2.0.20/include"/>
-					<Add directory="C:/Users/XPC/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
-					<Add directory="C:/Users/XPC/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
-					<Add directory="C:/Users/XPC/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
-					<Add directory="C:/Users/XPC/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/SDL2-devel-2.0.20-VC/SDL2-2.0.20/include"/>
+					<Add directory="C:/Cpp/include"/>
+					<Add directory="c:\cpp\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/include"/>
+					<Add directory="c:\cpp\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/include-fixed"/>
+					<Add directory="c:\cpp\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/Users/XPC/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/XPC/Documents/GitHub/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 GUI/fast"/>
-					<CompileFile command="C:/Users/XPC/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/XPC/Documents/GitHub/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/XPC/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/XPC/Documents/GitHub/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/XPC/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/XPC/Documents/GitHub/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/Cpp/bin/mingw32-make.exe -f &quot;G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 GUI/fast"/>
+					<CompileFile command="C:/Cpp/bin/mingw32-make.exe -f &quot;G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Cpp/bin/mingw32-make.exe -f &quot;G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Cpp/bin/mingw32-make.exe -f &quot;G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/XPC/Documents/GitHub/PolePositionCR/GUI/cmake-build-debug"/>
+				<Option working_dir="G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/Users/XPC/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/XPC/Documents/GitHub/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/Users/XPC/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/XPC/Documents/GitHub/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/XPC/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/XPC/Documents/GitHub/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/XPC/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/XPC/Documents/GitHub/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/Cpp/bin/mingw32-make.exe -f &quot;G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/Cpp/bin/mingw32-make.exe -f &quot;G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Cpp/bin/mingw32-make.exe -f &quot;G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Cpp/bin/mingw32-make.exe -f &quot;G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/XPC/Documents/GitHub/PolePositionCR/GUI/Clientes/Cliente.c">
+		<Unit filename="G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/Clientes/Cliente.c">
 			<Option target="GUI"/>
 		</Unit>
-		<Unit filename="C:/Users/XPC/Documents/GitHub/PolePositionCR/GUI/Clientes/Cliente.h">
+		<Unit filename="G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/Clientes/Cliente.h">
 			<Option target="GUI"/>
 		</Unit>
-		<Unit filename="C:/Users/XPC/Documents/GitHub/PolePositionCR/GUI/Window/Game.c">
+		<Unit filename="G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/Window/Game.c">
 			<Option target="GUI"/>
 		</Unit>
-		<Unit filename="C:/Users/XPC/Documents/GitHub/PolePositionCR/GUI/Window/Game.h">
+		<Unit filename="G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/Window/Game.h">
 			<Option target="GUI"/>
 		</Unit>
-		<Unit filename="C:/Users/XPC/Documents/GitHub/PolePositionCR/GUI/Window/GameConstantes.h">
+		<Unit filename="G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/Window/GameConstantes.h">
 			<Option target="GUI"/>
 		</Unit>
-		<Unit filename="C:/Users/XPC/Documents/GitHub/PolePositionCR/GUI/cJSON/cJSON.c">
+		<Unit filename="G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cJSON/cJSON.c">
 			<Option target="GUI"/>
 		</Unit>
-		<Unit filename="C:/Users/XPC/Documents/GitHub/PolePositionCR/GUI/cJSON/cJSON.h">
+		<Unit filename="G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cJSON/cJSON.h">
 			<Option target="GUI"/>
 		</Unit>
-		<Unit filename="C:/Users/XPC/Documents/GitHub/PolePositionCR/GUI/main.c">
+		<Unit filename="G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/main.c">
 			<Option target="GUI"/>
 		</Unit>
-		<Unit filename="C:/Users/XPC/Documents/GitHub/PolePositionCR/GUI/CMakeLists.txt">
+		<Unit filename="G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

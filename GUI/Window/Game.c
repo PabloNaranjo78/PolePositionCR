@@ -51,6 +51,9 @@ bool gameInit() {
 
     SDL_SetRenderDrawColor( renderer, 0x2F, 0x2F, 0x2F, 0xFF );
 
+    bool derecha = false;
+    bool izquierda = false;
+
     int gameOver = 0;
     while (!gameOver) {
 
@@ -62,7 +65,7 @@ bool gameInit() {
        if (srcRect.y > 9000) {
             srcRect.y = 0;
         }
-        printf("%d\n", srcRect.y);
+    //    printf("%d\n", srcRect.y);
 //        SDL_BlitSurface(gBackground, &srcRect, gScreenSurface, NULL);
 //        SDL_BlitSurface(luigi, &luiRect, gScreenSurface, NULL);
 
@@ -70,6 +73,7 @@ bool gameInit() {
         SDL_RenderCopy(renderer, luigiTexture, &luiRectP, &luigiRect);
         SDL_RenderPresent(renderer);
         SDL_PollEvent(&event);
+
 
 
 
@@ -87,11 +91,20 @@ bool gameInit() {
                         break;
                     case SDLK_LEFT:
                         luiRectP.x =0;
-                        luigiRect.x -= 15;
+                    //    luigiRect.x -= 15;
+                        izquierda = true;
+                        derecha = false;
                         break;
                     case SDLK_RIGHT:
                         luiRectP.x = 58;
-                        luigiRect.x += 15;
+                        izquierda = false;
+                        derecha = true;
+                     //   luigiRect.x += 15;
+                        break;
+                    case SDLK_UP:
+                        luiRectP.x = 29;
+                        derecha = false;
+                        izquierda = false;
                         break;
 
                     default:
@@ -102,6 +115,14 @@ bool gameInit() {
                 break;
 
         }
+
+        if (derecha){
+            luigiRect.x += 10;
+        }
+        if (izquierda){
+            luigiRect.x -= 10;
+        }
+      //  printf("%d",derecha);
 
     SDL_Delay(30);
     }
