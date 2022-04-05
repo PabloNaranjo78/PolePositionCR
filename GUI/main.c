@@ -13,8 +13,7 @@
 
 int main(int argc, char *args[]) {
 
-
-
-    gameInit();
+    makeRequest(true,"{nombre: 'juan', edad: '20', trabajo: 'ninguno'}");
+    //gameInit();
 
 }

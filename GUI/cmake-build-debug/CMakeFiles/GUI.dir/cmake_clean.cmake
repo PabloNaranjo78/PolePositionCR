@@ -1,8 +1,12 @@
 file(REMOVE_RECURSE
   "CMakeFiles/GUI.dir/Clientes/Cliente.c.obj"
+  "CMakeFiles/GUI.dir/Clientes/Cliente.c.obj.d"
   "CMakeFiles/GUI.dir/Window/Game.c.obj"
+  "CMakeFiles/GUI.dir/Window/Game.c.obj.d"
   "CMakeFiles/GUI.dir/cJSON/cJSON.c.obj"
+  "CMakeFiles/GUI.dir/cJSON/cJSON.c.obj.d"
   "CMakeFiles/GUI.dir/main.c.obj"
+  "CMakeFiles/GUI.dir/main.c.obj.d"
   "GUI.exe"
   "GUI.exe.manifest"
   "GUI.pdb"
