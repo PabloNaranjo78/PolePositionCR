@@ -1,0 +1,9 @@
+//
+// Created by jpabl on 5/04/2022.
+//
+
+#ifndef GUI_SELECTIONMENUCONSTATES_H
+#define GUI_SELECTIONMENUCONSTATES_H
+
+SDL_Event event;
+#endif //GUI_SELECTIONMENUCONSTATES_H

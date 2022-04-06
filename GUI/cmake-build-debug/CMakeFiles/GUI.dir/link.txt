@@ -1,3 +1,3 @@
-C:\Users\XPC\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\213.7172.20\bin\cmake\win\bin\cmake.exe -E rm -f CMakeFiles\GUI.dir/objects.a
-C:\Users\XPC\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\213.7172.20\bin\mingw\bin\ar.exe qc CMakeFiles\GUI.dir/objects.a @CMakeFiles\GUI.dir\objects1.rsp
-C:\Users\XPC\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\213.7172.20\bin\mingw\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\GUI.dir/objects.a -Wl,--no-whole-archive -o GUI.exe -Wl,--out-implib,libGUI.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\GUI.dir\linklibs.rsp
+D:\JetBrains\apps\CLion\ch-0\212.5457.51\bin\cmake\win\bin\cmake.exe -E rm -f CMakeFiles\GUI.dir/objects.a
+C:\Cpp\bin\ar.exe cr CMakeFiles\GUI.dir/objects.a @CMakeFiles\GUI.dir\objects1.rsp
+C:\Cpp\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\GUI.dir/objects.a -Wl,--no-whole-archive -o GUI.exe -Wl,--out-implib,libGUI.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\GUI.dir\linklibs.rsp

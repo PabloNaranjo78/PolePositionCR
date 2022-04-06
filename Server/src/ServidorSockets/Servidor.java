@@ -44,6 +44,7 @@ public class Servidor {
                 do {
                     in1 = in.read();
                     res = (char)in1;
+                    System.out.println(res);
                     finalString+= res;
                 }
                 while (res!='}');
