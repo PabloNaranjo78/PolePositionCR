@@ -47,11 +47,6 @@ public class Servidor {
 
                 do {
                     in1 = in.read();
-<<<<<<< Updated upstream
-                    res = (char)in1;
-                    System.out.println(res);
-                    finalString+= res;
-=======
             //        System.out.println(in1 + " Entrada \n");
                     res = (char) in1.intValue();
                     if (res == '{'){
@@ -64,7 +59,6 @@ public class Servidor {
                     else {
                         finalString+= res;
                     }
->>>>>>> Stashed changes
                 }
                 while (!contador.equals(0));
 
