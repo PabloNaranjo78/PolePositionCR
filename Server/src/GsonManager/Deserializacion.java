@@ -3,7 +3,7 @@ package GsonManager;
 import com.google.gson.Gson;
 
 public class Deserializacion {
-    public static void main(String[] args) {
+    public void deserializar() {
         Informacion jan = new Informacion("jan","Aguilar",21,118040303);
 
         Gson gson = new Gson();

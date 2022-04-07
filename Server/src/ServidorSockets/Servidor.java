@@ -3,16 +3,14 @@ package ServidorSockets;
 import Eventos.Ventana;
 import GsonManager.Informacion;
 import com.google.gson.Gson;
-import com.google.gson.stream.JsonToken;
 
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.nio.charset.StandardCharsets;
-import java.util.stream.Stream;
 
 public class Servidor {
     public void iniciarServidor() {
+        Ventana ventana = new Ventana();
         ServerSocket servidor = null;
         Socket sc = null; //Socket del cliente
         DataInputStream in;
@@ -35,8 +33,6 @@ public class Servidor {
                 //in = new BufferedReader(new InputStreamReader(sc.getInputStream()));
                 in = new DataInputStream(sc.getInputStream());
                 out = new PrintStream(sc.getOutputStream());
-
-                //Ventana ventana = new Ventana();
 
                 //Hay que poner nombres más bonitos a las variables
                 Integer in1;
@@ -64,9 +60,9 @@ public class Servidor {
 
                 System.out.println(finalString);
 
-                Character letra = 'a';
-                String json = gson.toJson(jose);
-                out.println(json);
+//                Character letra = 'a';
+//                String json = gson.toJson(jose);
+                out.println(ventana.getEventManagerJson());
 
                 sc.close();
                 System.out.println("Cliente desconectado");
