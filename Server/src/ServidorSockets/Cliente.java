@@ -16,7 +16,7 @@ public class Cliente {
         DataInputStream in;
         DataOutputStream out;
 
-        Informacion jan = new Informacion("jan","Aguilar",21,118040303);
+        Informacion jose = new Informacion("jose","Sanchez",20,2222222);
 
         try {
             Socket sc = new Socket(host, puerto);
@@ -25,7 +25,7 @@ public class Cliente {
             out = new DataOutputStream(sc.getOutputStream());
 
             Gson gson = new Gson();
-            String json = gson.toJson(jan);
+            String json = gson.toJson(jose);
 
             out.writeUTF(json);
             //out.writeUTF("Hola mundo desde el cliente");

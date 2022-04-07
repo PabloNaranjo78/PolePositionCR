@@ -10,7 +10,13 @@ public class Ventana extends JFrame implements ActionListener{
     JButton boton1, boton2, boton3, boton4;
     JTextField texto1, texto2, texto3, texto4;
     JLabel imagen1, imagen2, imagen3, imagen4;
-    Ventana(){
+
+    Turbo turboEvento = new Turbo();
+    Disparo disparoEvento = new Disparo();
+    Vida vidaEvento = new Vida();
+    Hueco huecoEvento = new Hueco();
+
+    public Ventana(){
         ImageIcon turbo = new ImageIcon(getClass().getResource("Turbo.png"));
         ImageIcon disparo = new ImageIcon(getClass().getResource("Disparo.png"));
         ImageIcon vida = new ImageIcon(getClass().getResource("Vida.png"));
@@ -118,23 +124,58 @@ public class Ventana extends JFrame implements ActionListener{
         this.add(imagen4);
     }
 
+    private Boolean comprobar(String cadena){
+        Boolean resultado = null;
+        try {
+            Double.parseDouble(cadena);
+            resultado = true;
+        }catch(NumberFormatException e) {
+            resultado = false;
+        }
+        return resultado;
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==boton1){
-            System.out.println(texto1.getText());
-            texto1.setText("");
+            if (comprobar(texto1.getText())){
+                turboEvento.setActivo(true);
+                turboEvento.setKilometro(Float.valueOf(texto1.getText()));
+                System.out.println(turboEvento.getKilometro());
+                texto1.setText("");
+            }else{
+                texto1.setText("");
+            }
         }
         if (e.getSource()==boton2){
-            System.out.println(texto2.getText());
-            texto2.setText("");
+            if (comprobar(texto2.getText())){
+                disparoEvento.setActivo(true);
+                disparoEvento.setKilometro(Float.valueOf(texto2.getText()));
+                System.out.println(disparoEvento.getKilometro());
+                texto2.setText("");
+            }else{
+                texto2.setText("");
+            }
         }
         if (e.getSource()==boton3){
-            System.out.println(texto3.getText());
-            texto3.setText("");
+            if (comprobar(texto3.getText())){
+                vidaEvento.setActivo(true);
+                vidaEvento.setKilometro(Float.valueOf(texto3.getText()));
+                System.out.println(vidaEvento.getKilometro());
+                texto3.setText("");
+            }else{
+                texto3.setText("");
+            }
         }
         if (e.getSource()==boton4){
-            System.out.println(texto4.getText());
-            texto4.setText("");
+            if (comprobar(texto4.getText())){
+                huecoEvento.setActivo(true);
+                huecoEvento.setKilometro(Float.valueOf(texto4.getText()));
+                System.out.println(huecoEvento.getKilometro());
+                texto4.setText("");
+            }else{
+                texto4.setText("");
+            }
         }
     }
 }
