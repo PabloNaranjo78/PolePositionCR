@@ -6,7 +6,7 @@
 #define GUI_GAMECONSTANTES_H
 
 SDL_Surface* luigi = NULL;
-int velocidad = 600;
+int velocidad = 400;
 
 char *texturasJugadores[] = {
         "../Imagenes/mario.bmp",
@@ -16,7 +16,7 @@ char *texturasJugadores[] = {
 };
 
 int velocidades[] = {
-    0,600,1200
+    0,400,800
 };
 
 
