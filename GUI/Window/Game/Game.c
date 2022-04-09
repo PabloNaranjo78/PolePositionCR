@@ -8,7 +8,7 @@
 bool gameInit(SDL_Window *window, SDL_Renderer *renderer, int jugador) {
 
     SDL_Event event;
-    gBackground = SDL_LoadBMP("../Imagenes/Mapa.bmp");
+    SDL_Surface *gBackground = SDL_LoadBMP("../Imagenes/Mapa.bmp");
     SDL_Texture *gBackgroundTexture = SDL_CreateTextureFromSurface(renderer, gBackground);
     SDL_FreeSurface(gBackground);
 

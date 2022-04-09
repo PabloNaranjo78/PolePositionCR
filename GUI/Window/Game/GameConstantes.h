@@ -6,7 +6,6 @@
 #define GUI_GAMECONSTANTES_H
 
 SDL_Surface* gScreenSurface = NULL;
-SDL_Surface* gBackground = NULL;
 SDL_Surface* luigi = NULL;
 int velocidad = 600;
 
