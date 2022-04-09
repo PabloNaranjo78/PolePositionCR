@@ -18,11 +18,11 @@ public class Ventana extends JFrame implements ActionListener{
     }
 
     public Ventana(){
-        ImageIcon turbo = new ImageIcon(getClass().getResource("Turbo.png"));
-        ImageIcon disparo = new ImageIcon(getClass().getResource("Disparo.png"));
-        ImageIcon vida = new ImageIcon(getClass().getResource("Vida.png"));
-        ImageIcon hueco = new ImageIcon(getClass().getResource("Hueco.png"));
-        ImageIcon icono = new ImageIcon(getClass().getResource("Icono.png"));
+        ImageIcon turbo = new ImageIcon(getClass().getResource("Img/Turbo.png"));
+        ImageIcon disparo = new ImageIcon(getClass().getResource("Img/Disparo.png"));
+        ImageIcon vida = new ImageIcon(getClass().getResource("Img/Vida.png"));
+        ImageIcon hueco = new ImageIcon(getClass().getResource("Img/Hueco.png"));
+        ImageIcon icono = new ImageIcon(getClass().getResource("Img/Icono.png"));
 
         boton1 = new JButton();
         boton2 = new JButton();
