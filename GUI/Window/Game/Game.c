@@ -47,7 +47,7 @@ bool gameInit(SDL_Window *window, SDL_Renderer *renderer, int jugador) {
         SDL_RenderClear(renderer);
 
 
-       // backgroundPos.y += velocidad;
+        backgroundPos.y += 1;
       //  if (backgroundPos.y > 9000) {
       //      backgroundPos.y = 0;
       //  }
