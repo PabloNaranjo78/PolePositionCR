@@ -32,8 +32,8 @@ bool gameInit(SDL_Window *window, SDL_Renderer *renderer, int jugador) {
 
     backgroundPos.x = 0;
     backgroundPos.y = 0;
-    backgroundPos.w = 900;
-    backgroundPos.h = 600;
+    backgroundPos.w = 900/2;
+    backgroundPos.h = 600/2;
 
     SDL_SetRenderDrawColor(renderer, 0x2F, 0x2F, 0x2F, 0xFF);
 
