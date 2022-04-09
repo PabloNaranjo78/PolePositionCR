@@ -48,7 +48,7 @@ bool gameInit(SDL_Window *window, SDL_Renderer *renderer, int jugador) {
 
 
         backgroundPos.y += 600;
-        if (backgroundPos.y > 2400) {
+        if (backgroundPos.y > 4800) {
            backgroundPos.y = 0;
         }
 
