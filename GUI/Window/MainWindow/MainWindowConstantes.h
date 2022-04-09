@@ -11,6 +11,6 @@ const int SCREEN_HEIGHT = 600;
 
 SDL_Window *window;
 SDL_Renderer *renderer;
-SDL_Event event;
+int enterRender = 25;
 
 #endif //GUI_MAINWINDOWCONSTANTES_H

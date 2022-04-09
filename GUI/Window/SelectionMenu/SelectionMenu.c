@@ -11,6 +11,11 @@ void selectionMenu(SDL_Window *window,SDL_Renderer *renderer){
     SDL_Texture *backgroundS = SDL_CreateTextureFromSurface(renderer, backgroundImgS);
     SDL_FreeSurface(backgroundImgS);
 
+    SDL_Surface *textoSeleccionImg = SDL_LoadBMP( "../Imagenes/Seleccion.bmp" );
+    SDL_Texture *textoSeleccion = SDL_CreateTextureFromSurface(renderer, textoSeleccionImg);
+    SDL_FreeSurface(textoSeleccionImg);
+
+
     bool quit = false;
     while (!quit){
         SDL_SetRenderDrawColor(renderer,0,0,0,SDL_ALPHA_OPAQUE);
@@ -32,7 +37,7 @@ void selectionMenu(SDL_Window *window,SDL_Renderer *renderer){
                         quit = true;
                         break;
                     case SDLK_RETURN:
-                        gameInit(window,renderer,3);
+                        gameInit(window,renderer,2);
                         break;
                     default:
                         break;

@@ -8,13 +8,17 @@
 SDL_Surface* gScreenSurface = NULL;
 SDL_Surface* gBackground = NULL;
 SDL_Surface* luigi = NULL;
-SDL_Event event;
+int velocidad = 600;
 
 char *texturasJugadores[] = {
         "../Imagenes/mario.bmp",
         "../Imagenes/luigi.bmp",
         "../Imagenes/peach.bmp",
         "../Imagenes/yoshi.bmp"
+};
+
+int velocidades[] = {
+    0,600,1200
 };
 
 
