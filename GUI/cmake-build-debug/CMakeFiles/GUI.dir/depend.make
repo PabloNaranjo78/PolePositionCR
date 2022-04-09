@@ -4,6 +4,9 @@
 CMakeFiles/GUI.dir/Clientes/Cliente.c.obj: \
  ../Clientes/Cliente.c \
  ../Clientes/Cliente.h
+CMakeFiles/GUI.dir/LinkedList/LinkedList.c.obj: \
+ ../LinkedList/LinkedList.c \
+ ../LinkedList/LinkedList.h
 CMakeFiles/GUI.dir/Window/Game/Game.c.obj: \
  ../SDL2-devel-2.0.20-VC/SDL2-2.0.20/include/SDL.h \
  ../SDL2-devel-2.0.20-VC/SDL2-2.0.20/include/SDL_assert.h \

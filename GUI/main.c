@@ -14,10 +14,10 @@
 int main(int argc, char *args[]) {
 
    // makeRequest(true,"{nombre: 'juan', edad: '20', trabajo: 'ninguno'}");
-  //  mainWindow();
+    mainWindow();
     //gameInit();
 
-    printf("holamudno");
+  //  printf("holamudno");
 
     return 0;
 }

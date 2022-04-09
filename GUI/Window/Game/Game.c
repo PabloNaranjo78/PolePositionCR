@@ -127,8 +127,7 @@ bool gameInit(SDL_Window *window, SDL_Renderer *renderer, int jugador) {
     SDL_DestroyWindow(window);
     SDL_Quit();
 
-
-    return true;
+    exit(0);
 }
 
 bool loadMedia() {
