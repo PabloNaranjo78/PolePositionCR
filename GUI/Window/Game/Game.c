@@ -8,7 +8,7 @@
 bool gameInit(SDL_Window *window, SDL_Renderer *renderer, int jugador) {
 
     SDL_Event event;
-    SDL_Surface *gBackground = SDL_LoadBMP("../Imagenes/Mapa.bmp");
+    SDL_Surface *gBackground = SDL_LoadBMP("../Imagenes/Pruebafondo.bmp");
     SDL_Texture *gBackgroundTexture = SDL_CreateTextureFromSurface(renderer, gBackground);
     SDL_FreeSurface(gBackground);
 
@@ -47,10 +47,10 @@ bool gameInit(SDL_Window *window, SDL_Renderer *renderer, int jugador) {
         SDL_RenderClear(renderer);
 
 
-        backgroundPos.y += velocidad;
-        if (backgroundPos.y > 9000) {
-            backgroundPos.y = 0;
-        }
+       // backgroundPos.y += velocidad;
+      //  if (backgroundPos.y > 9000) {
+      //      backgroundPos.y = 0;
+      //  }
 
         if (playerPos.x > 750) {
             playerPos.x = 750;
