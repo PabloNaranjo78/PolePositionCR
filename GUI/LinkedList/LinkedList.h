@@ -6,13 +6,15 @@
 #define GUI_LINKEDLIST_H
 #include <stdbool.h>
 
-struct nodeList{
+typedef struct nodeList{
     int jugador;
     int posX;
     float kilometro;
     bool disparo;
     struct nodeList *nextNode;
-};
+} JugadoresLista;
 
-void addToList(struct nodeList *Nodo, int jugador, int posX, float kilometro, bool disparo);
+JugadoresLista *crearLista(JugadoresLista *lista);
+JugadoresLista *addToList(JugadoresLista *Nodo, int jugador, int posX, float kilometro, bool disparo);
+void print_list(JugadoresLista * head);
 #endif //GUI_LINKEDLIST_H

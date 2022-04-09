@@ -7,6 +7,7 @@
 
 SDL_Surface* luigi = NULL;
 int velocidad = 400;
+float kilometro = 0.0f;
 
 char *texturasJugadores[] = {
         "../Imagenes/mario.bmp",

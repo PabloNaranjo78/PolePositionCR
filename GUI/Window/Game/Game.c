@@ -113,14 +113,23 @@ bool gameInit(SDL_Window *window, SDL_Renderer *renderer, int jugador) {
 
         }
 
-        if (derecha) {
+        if (derecha and velocidad!=0) {
             playerPos.x += 10;
         }
-        if (izquierda) {
+        if (izquierda and velocidad!=0) {
             playerPos.x -= 10;
         }
 
+        if (velocidad == velocidades[1]) {
+            kilometro+= 0.0005f;
+        }
+        if (velocidad == velocidades[2]) {
+            kilometro+= 0.001f;
+        }
+        printf("%f\n", kilometro);
         SDL_Delay(30);
+
+
     }
 
     SDL_DestroyRenderer(renderer);
