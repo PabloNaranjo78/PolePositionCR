@@ -16,9 +16,9 @@ bool gameInit(SDL_Window *window, SDL_Renderer *renderer, int jugador) {
 
     SDL_Surface *puntosVidaDisparo = SDL_LoadBMP("../Imagenes/PuntosVidaDisparo.bmp");
 
-    luigi = SDL_LoadBMP(texturasJugadores[jugador]);
-    SDL_Texture *luigiTexture = SDL_CreateTextureFromSurface(renderer, luigi);
-    SDL_FreeSurface(luigi);
+    thisplayer = SDL_LoadBMP(texturasJugadores[jugador]);
+    SDL_Texture *luigiTexture = SDL_CreateTextureFromSurface(renderer, thisplayer);
+    SDL_FreeSurface(thisplayer);
 
     SDL_Rect playerPos;
     playerPos.x = 305;
@@ -43,6 +43,17 @@ bool gameInit(SDL_Window *window, SDL_Renderer *renderer, int jugador) {
     bool derecha = false;
     bool izquierda = false;
 
+    SDL_Surface *tempJugador = SDL_LoadBMP(texturasJugadores[1]);
+    SDL_Texture *jugadorTexture = SDL_CreateTextureFromSurface(renderer, tempJugador);
+    SDL_FreeSurface(tempJugador);
+    SDL_Rect jugadorPostemp;
+
+    SDL_Rect jugadorSpritetemp;
+    jugadorSpritetemp.x = 29;
+    jugadorSpritetemp.y = 0;
+    jugadorSpritetemp.w = 28;
+    jugadorSpritetemp.h = 30;
+
     int gameOver = 0;
     while (!gameOver) {
 
@@ -57,18 +68,19 @@ bool gameInit(SDL_Window *window, SDL_Renderer *renderer, int jugador) {
         cJSON_AddNumberToObject(jugadorJSON, "vidas", vidas);
         cJSON_AddNumberToObject(jugadorJSON, "puntos", puntos);
 
-        printf("%s\n", cJSON_Print(jugadorJSON));
+    //    printf("%s\n", cJSON_Print(jugadorJSON));
 
         cJSON_AddItemToObject(json,jugadoresNombre[jugador], jugadorJSON);
 
         char *str = cJSON_Print(json);
    //     printf("%s\n", str);
         char *respuesta = makeRequest(false, str);
-        printf("%s-> %s\n",jugadoresNombre[jugador], respuesta);
+    //    printf("%s-> %s\n",jugadoresNombre[jugador], respuesta);
 
         cJSON *jsonRespuesta = cJSON_Parse(respuesta);
 
-        printf("->>>>>%s\n", cJSON_Print(jsonRespuesta));
+
+     //   printf("->>>>>%s\n", cJSON_Print(jsonRespuesta));
 
 //        cJSON *Hueco;
 //        Hueco = cJSON_GetObjectItem(jsonRespuesta, "Hueco");
@@ -80,6 +92,18 @@ bool gameInit(SDL_Window *window, SDL_Renderer *renderer, int jugador) {
 //
 //        char *stRRR = cJSON_Print(Hueco);
 //        printf("hueco->%.2f\n", posYHueco->valuedouble);
+
+
+        cJSON *jugadorRespuesta;
+        cJSON *jugadoresLista = cJSON_GetObjectItem(jsonRespuesta,"listaJugadores");
+        cJSON *head;
+        listaEnalzadaJugadores = crearLista(listaEnalzadaJugadores);
+        head = cJSON_GetObjectItem(jugadoresLista, "head");
+
+
+        print_list(listaEnalzadaJugadores);
+
+     //   printf("%s\n", cJSON_Print(jugadoresLista));
 
         SDL_SetRenderDrawColor(renderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
         SDL_RenderClear(renderer);
@@ -100,12 +124,28 @@ bool gameInit(SDL_Window *window, SDL_Renderer *renderer, int jugador) {
             playerSprite.x = 29;
         }
 
+        JugadoresLista *aux = listaEnalzadaJugadores->nextNode;
+
+
+        if (aux->jugador!=jugador){
+                printf("pintando jugador %d\n", aux->jugador);
+
+                jugadorPostemp.x = aux->posX;
+                jugadorPostemp.y = 500;
+                jugadorPostemp.w = 28 * 2;
+                jugadorPostemp.h = 30 * 2;
+
+                SDL_RenderCopy(renderer, jugadorTexture, &jugadorSpritetemp, &jugadorPostemp);
+            }
+
 
         SDL_RenderCopy(renderer, gBackgroundTexture, &backgroundPos, NULL);
         SDL_RenderCopy(renderer, luigiTexture, &playerSprite, &playerPos);
         SDL_RenderCopy(renderer, puntosVidaDisparo, NULL,NULL);
         SDL_RenderPresent(renderer);
         SDL_PollEvent(&event);
+
+
 
 
         switch (event.type) {
@@ -128,7 +168,6 @@ bool gameInit(SDL_Window *window, SDL_Renderer *renderer, int jugador) {
                         playerSprite.x = 58;
                         izquierda = false;
                         derecha = true;
-                        velocidad = velocidades[1];
                         break;
                     case SDLK_UP:
                         playerSprite.x = 29;

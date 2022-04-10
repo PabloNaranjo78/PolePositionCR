@@ -66,8 +66,8 @@ public class Servidor {
 //                Character letra = 'a';
 //                String json = gson.toJson(jose);
                // out.println(ventana.getEventManagerJson());
-              //  out.println(ventana.getEventManagerJson());
-                out2.writeUTF(ventana.getEventManagerJson());
+                out.println(ventana.getEventManagerJson());
+             //   out2.writeUTF(ventana.getEventManagerJson());
                 sc.close();
                 System.out.println("Cliente desconectado");
 

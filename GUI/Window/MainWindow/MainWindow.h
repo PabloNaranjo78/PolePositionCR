@@ -6,6 +6,10 @@
 #define GUI_MAINWINDOW_H
 #include <SDL.h>
 
+/***
+ * Esta función hace un llamado a la función de inicialización de SDL y con ello mostrar
+ * la pantalla de inicio.
+ */
 void mainWindow();
 
 

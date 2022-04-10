@@ -20,4 +20,5 @@ typedef struct nodeList{
 JugadoresLista *crearLista(JugadoresLista *lista);
 JugadoresLista *addToList(JugadoresLista *Nodo, int jugador, int posX, float kilometro, bool disparo, int vidas, int puntos);
 void print_list(JugadoresLista * head);
+JugadoresLista *actualizarLista(JugadoresLista *head, int jugador, int posX, float kilometro, bool disparo, int vidas, int puntos);
 #endif //GUI_LINKEDLIST_H

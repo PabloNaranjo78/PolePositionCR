@@ -32,11 +32,14 @@ JugadoresLista* addToList(JugadoresLista *Nodo, int jugador, int posX, float kil
     return Nodo;
 }
 
+
+
 void print_list(JugadoresLista * head) {
     JugadoresLista * current = head;
 
     while (current != NULL) {
-        printf("%d\n", current->jugador);
+        printf("Jugador: %d \n PosX %d \n KM %.2f \n disp %d \n vidas %d \n puntos %d \n ",
+               current->jugador, current->posX, current->kilometro, current->disparo, current->vidas, current->puntos);
         current = current->nextNode;
     }
 }
@@ -44,4 +47,25 @@ void print_list(JugadoresLista * head) {
 JugadoresLista *crearLista(JugadoresLista *lista) {
     lista = NULL;
     return lista;
+}
+
+JugadoresLista *
+actualizarLista(JugadoresLista *head, int jugador, int posX, float kilometro, bool disparo, int vidas, int puntos) {
+    JugadoresLista *current = head;
+    bool encontrado = false;
+    while (current != NULL) {
+        if (current->jugador == jugador) {
+            current->posX = posX;
+            current->kilometro = kilometro;
+            current->disparo = disparo;
+            current->vidas = vidas;
+            current->puntos = puntos;
+            encontrado = true;
+        }
+        current = current->nextNode;
+    }
+    if (!encontrado) {
+        head = addToList(head, jugador, posX, kilometro, disparo, vidas, puntos);
+    }
+    return head;
 }
