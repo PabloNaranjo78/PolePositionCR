@@ -15,6 +15,7 @@ public class Servidor {
         Socket sc = null; //Socket del cliente
         DataInputStream in;
         PrintStream out;
+        DataOutputStream out2;
 
         final Integer puerto = 5000;
 
@@ -33,6 +34,7 @@ public class Servidor {
                 //in = new BufferedReader(new InputStreamReader(sc.getInputStream()));
                 in = new DataInputStream(sc.getInputStream());
                 out = new PrintStream(sc.getOutputStream());
+                out2 = new DataOutputStream(sc.getOutputStream());
 
                 //Hay que poner nombres más bonitos a las variables
                 Integer in1;
@@ -63,8 +65,9 @@ public class Servidor {
 
 //                Character letra = 'a';
 //                String json = gson.toJson(jose);
-                out.println(ventana.getEventManagerJson());
-
+               // out.println(ventana.getEventManagerJson());
+              //  out.println(ventana.getEventManagerJson());
+                out2.writeUTF(ventana.getEventManagerJson());
                 sc.close();
                 System.out.println("Cliente desconectado");
 

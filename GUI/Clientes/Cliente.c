@@ -19,6 +19,8 @@ char* makeRequest(bool printState,char* message){
     char server_reply[6000];
     server.sin_family = AF_INET;
     server.sin_addr.s_addr = inet_addr("127.0.0.1");//"25.2.144.151"
+   //  server.sin_addr.s_addr = inet_addr("25.2.146.186");//"25.2.144.151"
+
     server.sin_port = htons( 5000 );
 
     // INICIO WINSOCK------------------------------------------------------------------------------------------>

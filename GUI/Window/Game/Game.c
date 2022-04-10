@@ -14,6 +14,8 @@ bool gameInit(SDL_Window *window, SDL_Renderer *renderer, int jugador) {
     SDL_Texture *gBackgroundTexture = SDL_CreateTextureFromSurface(renderer, gBackground);
     SDL_FreeSurface(gBackground);
 
+    SDL_Surface *puntosVidaDisparo = SDL_LoadBMP("../Imagenes/PuntosVidaDisparo.bmp");
+
     luigi = SDL_LoadBMP(texturasJugadores[jugador]);
     SDL_Texture *luigiTexture = SDL_CreateTextureFromSurface(renderer, luigi);
     SDL_FreeSurface(luigi);
@@ -101,6 +103,7 @@ bool gameInit(SDL_Window *window, SDL_Renderer *renderer, int jugador) {
 
         SDL_RenderCopy(renderer, gBackgroundTexture, &backgroundPos, NULL);
         SDL_RenderCopy(renderer, luigiTexture, &playerSprite, &playerPos);
+        SDL_RenderCopy(renderer, puntosVidaDisparo, NULL,NULL);
         SDL_RenderPresent(renderer);
         SDL_PollEvent(&event);
 
