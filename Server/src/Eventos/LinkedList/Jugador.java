@@ -6,22 +6,25 @@ public class Jugador {
     private Float km;
     private Boolean shoot;
     private Integer vidas;
+    private Integer puntos;
     private Jugador nextJugador;
 
-    public Jugador(Integer nombre, Integer posX, float km, boolean shoot, Integer vidas){
+    public Jugador(Integer nombre, Integer posX, float km, boolean shoot, Integer vidas, Integer puntos){
         this.nombre = nombre;
         this.posX = posX;
         this.km = km;
         this.shoot = shoot;
         this.vidas = vidas;
+        this.puntos = puntos;
 
     }
 
-    public void actualizar(Integer posX, float km, boolean shoot, Integer vidas){
+    public void actualizar(Integer posX, Float km, Boolean shoot, Integer vidas, Integer puntos){
         this.posX = posX;
         this.km = km;
         this.shoot = shoot;
         this.vidas = vidas;
+        this.puntos = puntos;
     }
 
     public Integer getNombre(){

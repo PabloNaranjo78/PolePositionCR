@@ -6,13 +6,15 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-JugadoresLista* addToList(JugadoresLista *Nodo, int jugador, int posX, float kilometro, bool disparo,int vidas){
+JugadoresLista* addToList(JugadoresLista *Nodo, int jugador, int posX, float kilometro, bool disparo,int vidas, int puntos) {
     JugadoresLista *nuevoNodo,*temp;
     nuevoNodo = (JugadoresLista*)malloc(sizeof(JugadoresLista));
     nuevoNodo->jugador = jugador;
     nuevoNodo->posX = posX;
     nuevoNodo->kilometro = kilometro;
     nuevoNodo->disparo = disparo;
+    nuevoNodo->vidas = vidas;
+    nuevoNodo->puntos = puntos;
 
     nuevoNodo->nextNode = NULL;
 

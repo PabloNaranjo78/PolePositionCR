@@ -53,6 +53,7 @@ bool gameInit(SDL_Window *window, SDL_Renderer *renderer, int jugador) {
         cJSON_AddNumberToObject(jugadorJSON, "Km", kilometro);
         cJSON_AddBoolToObject(jugadorJSON,"Disparo",true);
         cJSON_AddNumberToObject(jugadorJSON, "vidas", vidas);
+        cJSON_AddNumberToObject(jugadorJSON, "puntos", puntos);
 
         printf("%s\n", cJSON_Print(jugadorJSON));
 
@@ -162,7 +163,16 @@ bool gameInit(SDL_Window *window, SDL_Renderer *renderer, int jugador) {
         if (velocidad == velocidades[2]) {
             kilometro+= 0.001f;
         }
+
+        if (puntosCounter < 0) {
+            puntosCounter = 333;
+            puntos++;
+        }
+        puntosCounter--;
+       // printf("%d\n",puntosCounter);
      //   printf("%f\n", kilometro);
+
+
         SDL_Delay(30);
 
     }

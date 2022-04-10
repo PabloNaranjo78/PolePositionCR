@@ -9,6 +9,8 @@ SDL_Surface* luigi = NULL;
 int velocidad = 400;
 float kilometro = 0.0f;
 int vidas = 3;
+int puntos = 0;
+int puntosCounter = 333;
 
 char* jugadoresNombre[]={"0","1","2","3"};
 

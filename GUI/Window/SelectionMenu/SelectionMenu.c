@@ -96,24 +96,36 @@ void selectionMenu(SDL_Window *window,SDL_Renderer *renderer){
                 if (luigiAnimation.x > 351-27){
                     luigiAnimation.x = 0;
                 }
+                marioAnimation.x = 0;
+                peachAnimation.x = 0;
+                yoshiAnimation.x = 0;
             }
             if (seleccion ==1){
                 marioAnimation.x += 27;
                 if (marioAnimation.x > 351-27){
                     marioAnimation.x = 0;
                 }
+                luigiAnimation.x = 0;
+                peachAnimation.x = 0;
+                yoshiAnimation.x = 0;
             }
             if (seleccion ==2){
                 peachAnimation.x += 27;
                 if (peachAnimation.x > 351-27){
                     peachAnimation.x = 0;
                 }
+                luigiAnimation.x = 0;
+                marioAnimation.x = 0;
+                yoshiAnimation.x = 0;
             }
             if (seleccion ==3){
                 yoshiAnimation.x += 27;
                 if (yoshiAnimation.x > 351-27){
                     yoshiAnimation.x = 0;
                 }
+                luigiAnimation.x = 0;
+                marioAnimation.x = 0;
+                peachAnimation.x = 0;
             }
             frameAnimation = 0;
         }

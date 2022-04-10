@@ -16,12 +16,12 @@ public class EventManager {
     private Hueco hueco = new Hueco();
     private LinkedList listaJugadores = new LinkedList();
 
-    private void addJugador(Integer nombre, Integer posX, Float km, Boolean shoot, Integer vidas) {
-        this.listaJugadores.addJugador(nombre, posX, km, shoot,vidas);
+    private void addJugador(Integer nombre, Integer posX, Float km, Boolean shoot, Integer vidas,Integer puntos) {
+        this.listaJugadores.addJugador(nombre, posX, km, shoot,vidas,puntos);
     }
 
-    public void actualizarJugador(Integer nombre, Integer posX, Float km, Boolean shoot, Integer vidas) {
-        this.listaJugadores.actualizarJugador(nombre, posX, km, shoot,vidas);
+    public void actualizarJugador(Integer nombre, Integer posX, Float km, Boolean shoot, Integer vidas, Integer puntos) {
+        this.listaJugadores.actualizarJugador(nombre, posX, km, shoot,vidas,puntos);
     }
 
     public EventManager() {
@@ -71,6 +71,7 @@ public class EventManager {
         Float kmtemp = 0.0f;
         Boolean shoottemp = false;
         Integer vidastemp = 0;
+        Integer puntostemp = 0;
 
         JsonParser parser = new JsonParser();
         JsonElement elemet = parser.parse(json);
@@ -93,9 +94,12 @@ public class EventManager {
                     if (entry2.getKey().equals("vidas")) {
                         vidastemp = entry2.getValue().getAsInt();
                     }
+                    if (entry2.getKey().equals("puntos")) {
+                        puntostemp = entry2.getValue().getAsInt();
+                    }
 
                 }
-                this.actualizarJugador(Integer.parseInt(entry.getKey()), posXtemp, kmtemp, shoottemp, vidastemp);
+                this.actualizarJugador(Integer.parseInt(entry.getKey()), posXtemp, kmtemp, shoottemp, vidastemp,puntostemp);
             }
             if (entry.getKey().equals("Trubo")) {
                 JsonObject obj2 = entry.getValue().getAsJsonObject();
@@ -145,7 +149,6 @@ public class EventManager {
                     }
                 }
             }
-
         }
     }
 }
