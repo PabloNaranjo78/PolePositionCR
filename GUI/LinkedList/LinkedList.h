@@ -6,6 +6,9 @@
 #define GUI_LINKEDLIST_H
 #include <stdbool.h>
 
+/***
+ * Struct que se utiliza en la lista enlazada para guardar los datos de los jugadores
+ */
 typedef struct nodeList{
     int jugador;
     int posX;
@@ -16,8 +19,24 @@ typedef struct nodeList{
     struct nodeList *nextNode;
 } JugadoresLista;
 
-
+/***
+ * Funcion que crea un nodo de la lista enlazada
+ * @param lista  lista enlazada
+ * @return lista enlazada actualizada
+ */
 JugadoresLista *crearLista(JugadoresLista *lista);
+
+/***
+ * Funcion que inserta un nodo en la lista enlazada
+ * @param Nodo nodo cabeza de la lista
+ * @param jugador nombre del jugador
+ * @param posX posición en x del jugador
+ * @param kilometro kilomentro en el que se encuentra el jugador
+ * @param disparo estado del disparo del jugador
+ * @param vidas vidas del jugador
+ * @param puntos puntos que tiene el jugador
+ * @return
+ */
 JugadoresLista *addToList(JugadoresLista *Nodo, int jugador, int posX, float kilometro, bool disparo, int vidas, int puntos);
 void print_list(JugadoresLista * head);
 JugadoresLista *actualizarLista(JugadoresLista *head, int jugador, int posX, float kilometro, bool disparo, int vidas, int puntos);

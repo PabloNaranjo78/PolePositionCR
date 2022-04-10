@@ -14,7 +14,9 @@ bool gameInit(SDL_Window *window, SDL_Renderer *renderer, int jugador) {
     SDL_Texture *gBackgroundTexture = SDL_CreateTextureFromSurface(renderer, gBackground);
     SDL_FreeSurface(gBackground);
 
-    SDL_Surface *puntosVidaDisparo = SDL_LoadBMP("../Imagenes/PuntosVidaDisparo.bmp");
+  //  SDL_Surface *puntosVidaDisparo = NULL;
+  //  puntosVidaDisparo = SDL_LoadBMP("../Imagenes/PuntosVidaDisparo.bmp");
+    //SDL_Texture *puntosVidaDisparoTexture = SDL_CreateTextureFromSurface(renderer, puntosVidaDisparo);
 
     thisplayer = SDL_LoadBMP(texturasJugadores[jugador]);
     SDL_Texture *luigiTexture = SDL_CreateTextureFromSurface(renderer, thisplayer);
@@ -75,7 +77,7 @@ bool gameInit(SDL_Window *window, SDL_Renderer *renderer, int jugador) {
         char *str = cJSON_Print(json);
    //     printf("%s\n", str);
         char *respuesta = makeRequest(false, str);
-    //    printf("%s-> %s\n",jugadoresNombre[jugador], respuesta);
+        printf("%s-> %s\n",jugadoresNombre[jugador], respuesta);
 
         cJSON *jsonRespuesta = cJSON_Parse(respuesta);
 
@@ -101,7 +103,7 @@ bool gameInit(SDL_Window *window, SDL_Renderer *renderer, int jugador) {
         head = cJSON_GetObjectItem(jugadoresLista, "head");
 
 
-        print_list(listaEnalzadaJugadores);
+     //   print_list(listaEnalzadaJugadores);
 
      //   printf("%s\n", cJSON_Print(jugadoresLista));
 
@@ -141,7 +143,7 @@ bool gameInit(SDL_Window *window, SDL_Renderer *renderer, int jugador) {
 
         SDL_RenderCopy(renderer, gBackgroundTexture, &backgroundPos, NULL);
         SDL_RenderCopy(renderer, luigiTexture, &playerSprite, &playerPos);
-        SDL_RenderCopy(renderer, puntosVidaDisparo, NULL,NULL);
+        //SDL_RenderCopy(renderer, puntosVidaDisparoTexture, NULL,NULL);
         SDL_RenderPresent(renderer);
         SDL_PollEvent(&event);
 
