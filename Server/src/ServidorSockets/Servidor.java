@@ -9,6 +9,10 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class Servidor {
+
+    /***
+     * Este metodo se encarga de inicar el servidor, la ventana y el manejador de eventos.
+     */
     public void iniciarServidor() {
         Ventana ventana = new Ventana();
         ServerSocket servidor = null;

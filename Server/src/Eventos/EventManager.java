@@ -54,6 +54,10 @@ public class EventManager {
         hueco.setActivo(true);
     }
 
+    /***
+     * Este metodo retorna un JSON
+     * @return
+     */
     public String getJsonEvent() {
 //        String resultado = "{" + listaJugadores.toJson() +
 //                "\"Trubo\":{\"activo\":" + turbo.getActivo() + ",\"kilometro\":" + turbo.getKilometro() + "}," +
@@ -65,6 +69,10 @@ public class EventManager {
         return resultado;
     }
 
+    /***
+     * Este metodo se encarga de cargar toda la informacion de un JSON
+     * @param json
+     */
     public void loadFromJson(String json) {
 
         Integer posXtemp = 0;

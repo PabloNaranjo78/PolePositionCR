@@ -13,6 +13,7 @@ public class Ventana extends JFrame implements ActionListener{
 
     public EventManager eventManager = new EventManager();
 
+
     public String getEventManagerJson(){
         return eventManager.getJsonEvent();
     }
@@ -21,6 +22,9 @@ public class Ventana extends JFrame implements ActionListener{
         eventManager.loadFromJson(json);
     }
 
+    /***
+     * Este constructor se encarga de inicializar varios botnoes, imagenes y entradas de texto.
+     */
     public Ventana(){
         ImageIcon turbo = new ImageIcon(getClass().getResource("Img/Turbo.png"));
         ImageIcon disparo = new ImageIcon(getClass().getResource("Img/Disparo.png"));
