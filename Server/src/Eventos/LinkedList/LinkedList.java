@@ -7,23 +7,23 @@ public class LinkedList {
         head = null;
     }
 
-    public void actualizarJugador(Integer nombre, Integer nuevoPosX, Float nuevoKm, Boolean nuevaShoot){
+    public void actualizarJugador(Integer nombre, Integer nuevoPosX, Float nuevoKm, Boolean nuevaShoot, Integer nuevaVidas){
         Jugador aux = head;
         Boolean encontrado = false;
         while(aux != null){
             if(aux.getNombre().equals(nombre)){
-                aux.actualizar(nuevoPosX, nuevoKm, nuevaShoot);
+                aux.actualizar(nuevoPosX, nuevoKm, nuevaShoot, nuevaVidas);
                 encontrado = true;
             }
             aux = aux.getNext();
         }
         if (!encontrado){
-            addJugador(nombre, nuevoPosX, nuevoKm, nuevaShoot);
+            addJugador(nombre, nuevoPosX, nuevoKm, nuevaShoot,nuevaVidas);
         }
     }
 
-    public void addJugador(Integer nombre, int posX, float km, boolean shoot){
-        Jugador p = new Jugador(nombre, posX, km, shoot);
+    public void addJugador(Integer nombre, Integer posX, Float km, Boolean shoot, Integer vidas){
+        Jugador p = new Jugador(nombre, posX, km, shoot,vidas);
         addNode(p);
     }
 

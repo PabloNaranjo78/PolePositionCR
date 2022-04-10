@@ -93,25 +93,25 @@ void selectionMenu(SDL_Window *window,SDL_Renderer *renderer){
         if (frameAnimation >3){
             if (seleccion ==0){
                 luigiAnimation.x += 27;
-                if (luigiAnimation.x > 27*3){
+                if (luigiAnimation.x > 351-27){
                     luigiAnimation.x = 0;
                 }
             }
             if (seleccion ==1){
                 marioAnimation.x += 27;
-                if (marioAnimation.x > 27*3){
+                if (marioAnimation.x > 351-27){
                     marioAnimation.x = 0;
                 }
             }
             if (seleccion ==2){
                 peachAnimation.x += 27;
-                if (peachAnimation.x > 27*3){
+                if (peachAnimation.x > 351-27){
                     peachAnimation.x = 0;
                 }
             }
             if (seleccion ==3){
                 yoshiAnimation.x += 27;
-                if (yoshiAnimation.x > 27*3){
+                if (yoshiAnimation.x > 351-27){
                     yoshiAnimation.x = 0;
                 }
             }
@@ -120,13 +120,6 @@ void selectionMenu(SDL_Window *window,SDL_Renderer *renderer){
 
         frameAnimation++;
 
-
-        if(luigiAnimation.x > 324){
-            luigiAnimation.x = 0;
-            marioAnimation.x = 0;
-            peachAnimation.x = 0;
-            yoshiAnimation.x = 0;
-        }
 
         if (seleccion<0){
             seleccion = 3;
@@ -173,7 +166,7 @@ void selectionMenu(SDL_Window *window,SDL_Renderer *renderer){
                         break;
                 }
         }
-        printf("%d\n",seleccion);
+ //       printf("%d\n",seleccion);
 
 
 

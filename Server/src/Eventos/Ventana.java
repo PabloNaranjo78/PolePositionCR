@@ -17,6 +17,10 @@ public class Ventana extends JFrame implements ActionListener{
         return eventManager.getJsonEvent();
     }
 
+    public void loadEventManagerJson(String json){
+        eventManager.loadFromJson(json);
+    }
+
     public Ventana(){
         ImageIcon turbo = new ImageIcon(getClass().getResource("Img/Turbo.png"));
         ImageIcon disparo = new ImageIcon(getClass().getResource("Img/Disparo.png"));

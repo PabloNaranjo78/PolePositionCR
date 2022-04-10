@@ -8,6 +8,9 @@
 SDL_Surface* luigi = NULL;
 int velocidad = 400;
 float kilometro = 0.0f;
+int vidas = 3;
+
+char* jugadoresNombre[]={"0","1","2","3"};
 
 char *texturasJugadores[] = {
         "../Imagenes/luigi.bmp",

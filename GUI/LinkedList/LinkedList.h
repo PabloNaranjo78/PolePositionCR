@@ -11,11 +11,12 @@ typedef struct nodeList{
     int posX;
     float kilometro;
     bool disparo;
+    int vidas;
     struct nodeList *nextNode;
 } JugadoresLista;
 
 
 JugadoresLista *crearLista(JugadoresLista *lista);
-JugadoresLista *addToList(JugadoresLista *Nodo, int jugador, int posX, float kilometro, bool disparo);
+JugadoresLista *addToList(JugadoresLista *Nodo, int jugador, int posX, float kilometro, bool disparo, int vidas);
 void print_list(JugadoresLista * head);
 #endif //GUI_LINKEDLIST_H

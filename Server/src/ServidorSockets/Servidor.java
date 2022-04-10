@@ -59,6 +59,7 @@ public class Servidor {
                 while (!contador.equals(0));
 
                 System.out.println(finalString);
+                ventana.loadEventManagerJson(finalString);
 
 //                Character letra = 'a';
 //                String json = gson.toJson(jose);

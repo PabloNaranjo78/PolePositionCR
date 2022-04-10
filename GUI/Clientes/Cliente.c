@@ -10,7 +10,7 @@ static char UserIp[20];
  * @param printState : este parametro indica si queremos que se impriman los estados
  * @return  bool : en caso que la peticion fracase, se retorna un false
  */
-bool makeRequest(bool printState,char* message){
+char* makeRequest(bool printState,char* message){
     int state;
     WSADATA wsa;
     SOCKET mySocket;
@@ -61,7 +61,7 @@ bool makeRequest(bool printState,char* message){
     server_reply[state]='\0';
     if(printState)printf("@: Respuesta obtenida: %s \n", server_reply);
 
-    printf("%s\n", server_reply);
+  //  printf("%s\n", server_reply);
     closesocket(mySocket);
-    return true;
+    return server_reply;
 }

@@ -1,5 +1,6 @@
 package Eventos;
 import Eventos.LinkedList.LinkedList;
+import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -15,12 +16,12 @@ public class EventManager {
     private Hueco hueco = new Hueco();
     private LinkedList listaJugadores = new LinkedList();
 
-    public void addJugador(Integer nombre, Integer posX, Float km, Boolean shoot) {
-        this.listaJugadores.addJugador(nombre, posX, km, shoot);
+    private void addJugador(Integer nombre, Integer posX, Float km, Boolean shoot, Integer vidas) {
+        this.listaJugadores.addJugador(nombre, posX, km, shoot,vidas);
     }
 
-    public void actualizarJugador(Integer nombre, Integer posX, Float km, Boolean shoot) {
-        this.listaJugadores.actualizarJugador(nombre, posX, km, shoot);
+    public void actualizarJugador(Integer nombre, Integer posX, Float km, Boolean shoot, Integer vidas) {
+        this.listaJugadores.actualizarJugador(nombre, posX, km, shoot,vidas);
     }
 
     public EventManager() {
@@ -54,18 +55,22 @@ public class EventManager {
     }
 
     public String getJsonEvent() {
-        String resultado = "{" + listaJugadores.toJson() + "Trubo:{activo:" + turbo.getActivo() + ", kilometro:" + turbo.getKilometro() + "}," +
-                "Disparo:{activo:" + disparo.getActivo() + ", kilometro:" + disparo.getKilometro() + "}," +
-                "Vida:{activo:" + vida.getActivo() + ", kilometro:" + vida.getKilometro() + "}," +
-                "Hueco:{activo:" + hueco.getActivo() + ", kilometro:" + hueco.getKilometro() + "}" + "}";
+//        String resultado = "{" + listaJugadores.toJson() +
+//                "\"Trubo\":{\"activo\":" + turbo.getActivo() + ",\"kilometro\":" + turbo.getKilometro() + "}," +
+//                "\"Disparo\":{activo:" + disparo.getActivo() + ",\"kilometro\":" + disparo.getKilometro() + "}," +
+//                "\"Vida\":{\"activo\":" + vida.getActivo() + ",\"kilometro\":" + vida.getKilometro() + "}," +
+//                "\"Hueco\":{\"activo\":" + hueco.getActivo() + ",\"kilometro\":" + hueco.getKilometro() + "}" + "}";
+        Gson gson = new Gson();
+        String resultado = gson.toJson(this);
         return resultado;
     }
 
     public void loadFromJson(String json) {
 
-        int posXtemp = 0;
-        float kmtemp = 0.0f;
+        Integer posXtemp = 0;
+        Float kmtemp = 0.0f;
         Boolean shoottemp = false;
+        Integer vidastemp = 0;
 
         JsonParser parser = new JsonParser();
         JsonElement elemet = parser.parse(json);
@@ -82,12 +87,15 @@ public class EventManager {
                     if (entry2.getKey().equals("Km")) {
                         kmtemp = entry2.getValue().getAsFloat();
                     }
-                    if (entry2.getKey().equals("shoot")) {
+                    if (entry2.getKey().equals("Disparo")) {
                         shoottemp = entry2.getValue().getAsBoolean();
+                    }
+                    if (entry2.getKey().equals("vidas")) {
+                        vidastemp = entry2.getValue().getAsInt();
                     }
 
                 }
-                this.actualizarJugador(Integer.parseInt(entry.getKey()), posXtemp, kmtemp, shoottemp);
+                this.actualizarJugador(Integer.parseInt(entry.getKey()), posXtemp, kmtemp, shoottemp, vidastemp);
             }
             if (entry.getKey().equals("Trubo")) {
                 JsonObject obj2 = entry.getValue().getAsJsonObject();

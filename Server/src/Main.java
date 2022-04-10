@@ -13,8 +13,8 @@ public class Main {
     public static void main(String[] args) {
 
 //        System.out.println("Hello World!");
-//        Servidor server = new Servidor();
-//        server.iniciarServidor();
+        Servidor server = new Servidor();
+        server.iniciarServidor();
 //        LinkedList lista = new LinkedList();
 //        lista.addJugador(1,34,22.2f,true);
 //        lista.addJugador(2,364,221.2f,true);
@@ -22,19 +22,22 @@ public class Main {
 //
 //        System.out.println(lista.toString());
 
-        EventManager eventManager = new EventManager();
-        eventManager.addJugador(1,34,22.2f,true);
-        eventManager.addJugador(2,34,22.2f,true);
-        eventManager.agregarTurbo(2.2f);
-        String jsonText = eventManager.getJsonEvent();
-    //    System.out.println(jsonText);
-
-        EventManager eventManager2 = new EventManager();
-
-        eventManager2.loadFromJson(jsonText);
-
-        System.out.println(eventManager2.getJsonEvent());
-
+//        EventManager eventManager = new EventManager();
+//        eventManager.actualizarJugador(1,34,22.2f,true,3);
+//        eventManager.actualizarJugador(2,34,22.2f,true,3);
+//        eventManager.agregarTurbo(2.2f);
+//        String jsonText = eventManager.getJsonEvent();
+//        System.out.println(jsonText);
+//
+//        EventManager eventManager2 = new EventManager();
+//
+//        eventManager2.loadFromJson(jsonText);
+//
+//        System.out.println(eventManager2.getJsonEvent());
+//
+//        eventManager2.actualizarJugador(2,90,22.2f,false,3);
+//
+//        System.out.println(eventManager2.getJsonEvent());
 
       //  System.out.println(lista.toJson());
     }

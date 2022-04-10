@@ -1,6 +1,8 @@
 #include <iso646.h>
 #include "Game.h"
 #include "GameConstantes.h"
+#include "../../Clientes/Cliente.h"
+#include "../../cJSON/cJSON.h"
 
 #define SDL_MAIN_HANDLED
 
@@ -22,7 +24,6 @@ bool gameInit(SDL_Window *window, SDL_Renderer *renderer, int jugador) {
     playerPos.w = 28 * 2;
     playerPos.h = 30 * 2;
 
-
     SDL_Rect playerSprite;
     playerSprite.x = 29;
     playerSprite.y = 0;
@@ -42,6 +43,40 @@ bool gameInit(SDL_Window *window, SDL_Renderer *renderer, int jugador) {
 
     int gameOver = 0;
     while (!gameOver) {
+
+        cJSON *json = NULL;
+        json = cJSON_CreateObject();
+        cJSON *jugadorJSON = NULL;
+        jugadorJSON = cJSON_CreateObject();
+
+        cJSON_AddNumberToObject(jugadorJSON, "posX", playerPos.x);
+        cJSON_AddNumberToObject(jugadorJSON, "Km", kilometro);
+        cJSON_AddBoolToObject(jugadorJSON,"Disparo",true);
+        cJSON_AddNumberToObject(jugadorJSON, "vidas", vidas);
+
+        printf("%s\n", cJSON_Print(jugadorJSON));
+
+        cJSON_AddItemToObject(json,jugadoresNombre[jugador], jugadorJSON);
+
+        char *str = cJSON_Print(json);
+   //     printf("%s\n", str);
+        char *respuesta = makeRequest(false, str);
+        printf("%s-> %s\n",jugadoresNombre[jugador], respuesta);
+
+        cJSON *jsonRespuesta = cJSON_Parse(respuesta);
+
+        printf("->>>>>%s\n", cJSON_Print(jsonRespuesta));
+
+//        cJSON *Hueco;
+//        Hueco = cJSON_GetObjectItem(jsonRespuesta, "Hueco");
+//
+//        printf("%s\n", cJSON_Print(Hueco));
+//
+//        cJSON *posYHueco;
+//        posYHueco = cJSON_GetObjectItem(Hueco, "kilometro");
+//
+//        char *stRRR = cJSON_Print(Hueco);
+//        printf("hueco->%.2f\n", posYHueco->valuedouble);
 
         SDL_SetRenderDrawColor(renderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
         SDL_RenderClear(renderer);
@@ -127,7 +162,7 @@ bool gameInit(SDL_Window *window, SDL_Renderer *renderer, int jugador) {
         if (velocidad == velocidades[2]) {
             kilometro+= 0.001f;
         }
-        printf("%f\n", kilometro);
+     //   printf("%f\n", kilometro);
         SDL_Delay(30);
 
     }

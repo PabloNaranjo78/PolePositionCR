@@ -12,5 +12,5 @@
 #include <pthread.h>
 #include <stdio.h>
 
-bool makeRequest(bool printState, char* message);
+char* makeRequest(bool printState, char* message);
 #endif //GUI_CLIENTE_H

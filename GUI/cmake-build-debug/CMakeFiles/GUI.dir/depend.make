@@ -57,9 +57,11 @@ CMakeFiles/GUI.dir/Window/Game/Game.c.obj: \
  ../SDL2-devel-2.0.20-VC/SDL2-2.0.20/include/SDL_video.h \
  ../SDL2-devel-2.0.20-VC/SDL2-2.0.20/include/begin_code.h \
  ../SDL2-devel-2.0.20-VC/SDL2-2.0.20/include/close_code.h \
+ ../Clientes/Cliente.h \
  ../Window/Game/Game.c \
  ../Window/Game/Game.h \
- ../Window/Game/GameConstantes.h
+ ../Window/Game/GameConstantes.h \
+ ../cJSON/cJSON.h
 CMakeFiles/GUI.dir/Window/MainWindow/MainWindow.c.obj: \
  ../SDL2-devel-2.0.20-VC/SDL2-2.0.20/include/SDL.h \
  ../SDL2-devel-2.0.20-VC/SDL2-2.0.20/include/SDL_assert.h \

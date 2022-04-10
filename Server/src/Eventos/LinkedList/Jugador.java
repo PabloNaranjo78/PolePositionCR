@@ -5,20 +5,23 @@ public class Jugador {
     private Integer posX;
     private Float km;
     private Boolean shoot;
+    private Integer vidas;
     private Jugador nextJugador;
 
-    public Jugador(Integer nombre, Integer posX, float km, boolean shoot){
+    public Jugador(Integer nombre, Integer posX, float km, boolean shoot, Integer vidas){
         this.nombre = nombre;
         this.posX = posX;
         this.km = km;
         this.shoot = shoot;
+        this.vidas = vidas;
 
     }
 
-    public void actualizar(Integer posX, float km, boolean shoot){
+    public void actualizar(Integer posX, float km, boolean shoot, Integer vidas){
         this.posX = posX;
         this.km = km;
         this.shoot = shoot;
+        this.vidas = vidas;
     }
 
     public Integer getNombre(){
@@ -49,7 +52,8 @@ public class Jugador {
     }
 
     public String toJson(){
-        return nombre + ":{\"posX\":" + posX + ",\"Km\":" + km + ",\"Disparo\":\"" + shoot + "\"}";
+   //     return "{\"nombre\": " + this.nombre + ", \"posX\": " + posX + ", \"km\": " + km + ", \"shoot\": " + shoot + ", \"vidas\": " + vidas + "}";
+        return "\"" +nombre+ "\"" + ":{\"posX\":" + posX + ",\"Km\":" + km + ",\"Disparo\":\"" + shoot + "\"" + ",\"vidas\":" + vidas + "}";
     }
 
 }
