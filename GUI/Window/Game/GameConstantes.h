@@ -15,16 +15,24 @@ int puntos = 0;
 int puntosCounter = 333;
 JugadoresLista* listaEnalzadaJugadores = NULL;
 
-
+/***
+ * Nombre para los jugadores
+ */
 char* jugadoresNombre[]={"0","1","2","3"};
 
+/***
+ * Texturas de los jugadores
+ */
 char *texturasJugadores[] = {
-        "../Imagenes/thisplayer.bmp",
+        "../Imagenes/luigi.bmp",
         "../Imagenes/mario.bmp",
         "../Imagenes/yoshi.bmp",
         "../Imagenes/peach.bmp",
 };
 
+/***
+ * Velocidades a las que puede estar el jugador
+ */
 int velocidades[] = {
     0,400,800
 };

@@ -6,16 +6,13 @@
 
 
 #define SDL_MAIN_HANDLED
+/***
+ * @brief Inicia el juego y todo lo necesario para que funcione
+ * @param window estancia de ventana de SDL
+ * @param renderer renderizador de ventana SDL
+ * @param jugador numero de jugador seleccionado por el usuario
+ * @return true si el juego se inicio correctamente, false en caso contrario
+ */
 bool gameInit(SDL_Window *window, SDL_Renderer *renderer,int jugador);
-
-//Starts up SDL and creates window
-bool init();
-
-//Loads media
-bool loadMedia();
-
-//Frees media and shuts down SDL
-void close();
-
 
 #endif //GUI_GAME_H
