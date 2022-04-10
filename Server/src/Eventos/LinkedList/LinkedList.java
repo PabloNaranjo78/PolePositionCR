@@ -7,17 +7,27 @@ public class LinkedList {
         head = null;
     }
 
-    public void actualizarJugador(String nombre, int nuevoPosX, float nuevoKm, boolean nuevaShoot){
+    public void actualizarJugador(Integer nombre, Integer nuevoPosX, Float nuevoKm, Boolean nuevaShoot){
         Jugador aux = head;
+        Boolean encontrado = false;
         while(aux != null){
             if(aux.getNombre().equals(nombre)){
                 aux.actualizar(nuevoPosX, nuevoKm, nuevaShoot);
+                encontrado = true;
             }
             aux = aux.getNext();
         }
+        if (!encontrado){
+            addJugador(nombre, nuevoPosX, nuevoKm, nuevaShoot);
+        }
     }
 
-    public void add(Jugador p){
+    public void addJugador(Integer nombre, int posX, float km, boolean shoot){
+        Jugador p = new Jugador(nombre, posX, km, shoot);
+        addNode(p);
+    }
+
+    public void addNode(Jugador p){
         if(head == null){
             head = p;
         }else{
@@ -43,7 +53,7 @@ public class LinkedList {
         String s = "";
         Jugador aux = head;
         while(aux != null){
-            s += aux.toJson() + "\n";
+            s += aux.toJson()+",";
             aux = aux.getNext();
         }
         return s;

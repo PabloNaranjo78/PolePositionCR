@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/Window/Game/Game.c" "G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cmake-build-debug/CMakeFiles/GUI.dir/Window/Game/Game.c.obj"
   "G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/Window/MainWindow/MainWindow.c" "G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cmake-build-debug/CMakeFiles/GUI.dir/Window/MainWindow/MainWindow.c.obj"
   "G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/Window/SelectionMenu/SelectionMenu.c" "G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cmake-build-debug/CMakeFiles/GUI.dir/Window/SelectionMenu/SelectionMenu.c.obj"
+  "G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/Window/Tools/Tools.c" "G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cmake-build-debug/CMakeFiles/GUI.dir/Window/Tools/Tools.c.obj"
   "G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cJSON/cJSON.c" "G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cmake-build-debug/CMakeFiles/GUI.dir/cJSON/cJSON.c.obj"
   "G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/main.c" "G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cmake-build-debug/CMakeFiles/GUI.dir/main.c.obj"
   )

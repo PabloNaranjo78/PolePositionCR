@@ -10,5 +10,5 @@ link_directories(${SDL2_LIBRARY_DIR})
 
 link_libraries(ws2_32 wsock32)
 
-add_executable(GUI main.c Window/Game/Game.c Window/Game/GameConstantes.h cJSON/cJSON.c cJSON/cJSON.h Clientes/Cliente.c Clientes/Cliente.h Window/MainWindow/MainWindow.c Window/MainWindow/MainWindow.h Window/MainWindow/MainWindowConstantes.h Window/SelectionMenu/SelectionMenu.c Window/SelectionMenu/SelectionMenu.h Window/SelectionMenu/SelectionMenuConstates.h LinkedList/LinkedList.c LinkedList/LinkedList.h)
+add_executable(GUI main.c Window/Game/Game.c Window/Game/GameConstantes.h cJSON/cJSON.c cJSON/cJSON.h Clientes/Cliente.c Clientes/Cliente.h Window/MainWindow/MainWindow.c Window/MainWindow/MainWindow.h Window/MainWindow/MainWindowConstantes.h Window/SelectionMenu/SelectionMenu.c Window/SelectionMenu/SelectionMenu.h Window/SelectionMenu/SelectionMenuConstates.h LinkedList/LinkedList.c LinkedList/LinkedList.h Window/Tools/Tools.c Window/Tools/Tools.h)
 target_link_libraries(${PROJECT_NAME} SDL2main SDL2)

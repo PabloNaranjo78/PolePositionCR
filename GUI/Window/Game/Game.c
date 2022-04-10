@@ -22,14 +22,14 @@ bool gameInit(SDL_Window *window, SDL_Renderer *renderer, int jugador) {
     playerPos.w = 28 * 2;
     playerPos.h = 30 * 2;
 
-    SDL_Rect backgroundPos;
-    SDL_Rect playerSprite;
 
+    SDL_Rect playerSprite;
     playerSprite.x = 29;
     playerSprite.y = 0;
     playerSprite.w = 28;
     playerSprite.h = 30;
 
+    SDL_Rect backgroundPos;
     backgroundPos.x = 0;
     backgroundPos.y = 0;
     backgroundPos.w = 600;
@@ -113,6 +113,7 @@ bool gameInit(SDL_Window *window, SDL_Renderer *renderer, int jugador) {
 
         }
 
+
         if (derecha and velocidad!=0) {
             playerPos.x += 10;
         }
@@ -128,7 +129,6 @@ bool gameInit(SDL_Window *window, SDL_Renderer *renderer, int jugador) {
         }
         printf("%f\n", kilometro);
         SDL_Delay(30);
-
 
     }
 

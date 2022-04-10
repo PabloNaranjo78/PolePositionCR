@@ -41,7 +41,7 @@ void mainWindow(){
     SDL_FreeSurface(enterTextImg);
 
     SDL_SetWindowIcon(window, SDL_LoadBMP("../Imagenes/icon.bmp"));
-    int quit = 0;
+
     int gameOver = 0;
     while (!gameOver) {
 
@@ -69,8 +69,6 @@ void mainWindow(){
         }else{
             backgroundRect->x += 1;
         }
-
-
 
         switch (event.type) {
 

@@ -117,6 +117,12 @@
 		<Unit filename="G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/Window/SelectionMenu/SelectionMenuConstates.h">
 			<Option target="GUI"/>
 		</Unit>
+		<Unit filename="G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/Window/Tools/Tools.c">
+			<Option target="GUI"/>
+		</Unit>
+		<Unit filename="G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/Window/Tools/Tools.h">
+			<Option target="GUI"/>
+		</Unit>
 		<Unit filename="G:/Mi unidad/Pablo/Lenguajes/Tareas/PolePositionCR/GUI/cJSON/cJSON.c">
 			<Option target="GUI"/>
 		</Unit>

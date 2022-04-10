@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/GUI.dir/Window/Game/Game.c.obj"
   "CMakeFiles/GUI.dir/Window/MainWindow/MainWindow.c.obj"
   "CMakeFiles/GUI.dir/Window/SelectionMenu/SelectionMenu.c.obj"
+  "CMakeFiles/GUI.dir/Window/Tools/Tools.c.obj"
   "CMakeFiles/GUI.dir/cJSON/cJSON.c.obj"
   "CMakeFiles/GUI.dir/main.c.obj"
   "GUI.exe"

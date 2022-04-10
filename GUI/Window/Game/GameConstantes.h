@@ -10,10 +10,10 @@ int velocidad = 400;
 float kilometro = 0.0f;
 
 char *texturasJugadores[] = {
-        "../Imagenes/mario.bmp",
         "../Imagenes/luigi.bmp",
+        "../Imagenes/mario.bmp",
+        "../Imagenes/yoshi.bmp",
         "../Imagenes/peach.bmp",
-        "../Imagenes/yoshi.bmp"
 };
 
 int velocidades[] = {

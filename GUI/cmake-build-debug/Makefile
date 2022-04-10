@@ -248,6 +248,30 @@ Window/SelectionMenu/SelectionMenu.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GUI.dir\build.make CMakeFiles/GUI.dir/Window/SelectionMenu/SelectionMenu.c.s
 .PHONY : Window/SelectionMenu/SelectionMenu.c.s
 
+Window/Tools/Tools.obj: Window/Tools/Tools.c.obj
+.PHONY : Window/Tools/Tools.obj
+
+# target to build an object file
+Window/Tools/Tools.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GUI.dir\build.make CMakeFiles/GUI.dir/Window/Tools/Tools.c.obj
+.PHONY : Window/Tools/Tools.c.obj
+
+Window/Tools/Tools.i: Window/Tools/Tools.c.i
+.PHONY : Window/Tools/Tools.i
+
+# target to preprocess a source file
+Window/Tools/Tools.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GUI.dir\build.make CMakeFiles/GUI.dir/Window/Tools/Tools.c.i
+.PHONY : Window/Tools/Tools.c.i
+
+Window/Tools/Tools.s: Window/Tools/Tools.c.s
+.PHONY : Window/Tools/Tools.s
+
+# target to generate assembly for a file
+Window/Tools/Tools.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GUI.dir\build.make CMakeFiles/GUI.dir/Window/Tools/Tools.c.s
+.PHONY : Window/Tools/Tools.c.s
+
 cJSON/cJSON.obj: cJSON/cJSON.c.obj
 .PHONY : cJSON/cJSON.obj
 
@@ -320,6 +344,9 @@ help:
 	@echo ... Window/SelectionMenu/SelectionMenu.obj
 	@echo ... Window/SelectionMenu/SelectionMenu.i
 	@echo ... Window/SelectionMenu/SelectionMenu.s
+	@echo ... Window/Tools/Tools.obj
+	@echo ... Window/Tools/Tools.i
+	@echo ... Window/Tools/Tools.s
 	@echo ... cJSON/cJSON.obj
 	@echo ... cJSON/cJSON.i
 	@echo ... cJSON/cJSON.s
