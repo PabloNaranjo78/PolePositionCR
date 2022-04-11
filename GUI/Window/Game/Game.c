@@ -82,7 +82,7 @@ bool gameInit(SDL_Window *window, SDL_Renderer *renderer, int jugador) {
         cJSON *jsonRespuesta = cJSON_Parse(respuesta);
 
 
-     //   printf("->>>>>%s\n", cJSON_Print(jsonRespuesta));
+        printf("->>>>>%s\n", cJSON_Print(jsonRespuesta));
 
 //        cJSON *Hueco;
 //        Hueco = cJSON_GetObjectItem(jsonRespuesta, "Hueco");
