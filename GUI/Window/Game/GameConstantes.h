@@ -7,13 +7,36 @@
 
 #include "../../LinkedList/LinkedList.h"
 
+/***
+ * Strucut utilizado para guardar los datos de un jugador
+ */
+typedef struct {
+    SDL_Surface *image;
+    SDL_Texture *texture;
+    SDL_Rect position;
+    SDL_Rect playerSprite;
+    int nombre;
+    int posX;
+    int posY;
+    float kilometro;
+    int velocidad;
+    int vidas;
+    int puntos;
+
+}JugadorPlantilla;
+
 SDL_Surface* thisplayer = NULL;
-int velocidad = 400;
-float kilometro = 0.0f;
-int vidas = 3;
-int puntos = 0;
+
 int puntosCounter = 333;
 JugadoresLista* listaEnalzadaJugadores = NULL;
+
+int jugadorTemp = 0;
+int posXTemp = 0;
+float kilometroTemp = 0.0f;
+int vidasTemp = 0;
+int puntosTemp = 0;
+int puntosCounterTemp = 0;
+
 
 /***
  * Nombre para los jugadores
@@ -35,6 +58,10 @@ char *texturasJugadores[] = {
  */
 int velocidades[] = {
     0,400,800
+};
+
+int posicionesXiniciales[]={
+        305,355,410,465
 };
 
 

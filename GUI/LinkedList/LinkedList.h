@@ -39,5 +39,17 @@ JugadoresLista *crearLista(JugadoresLista *lista);
  */
 JugadoresLista *addToList(JugadoresLista *Nodo, int jugador, int posX, float kilometro, bool disparo, int vidas, int puntos);
 void print_list(JugadoresLista * head);
+
+/***
+ * Acutualiza una una lista enlazada
+ * @param head cabeza de la lista enlazada
+ * @param jugador numero de jugador
+ * @param posX posición en X
+ * @param kilometro kilometro recorrido
+ * @param disparo estado de disparo
+ * @param vidas vidas
+ * @param puntos puntos
+ * @return
+ */
 JugadoresLista *actualizarLista(JugadoresLista *head, int jugador, int posX, float kilometro, bool disparo, int vidas, int puntos);
 #endif //GUI_LINKEDLIST_H

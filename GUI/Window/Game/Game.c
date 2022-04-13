@@ -14,25 +14,31 @@ bool gameInit(SDL_Window *window, SDL_Renderer *renderer, int jugador) {
     SDL_Texture *gBackgroundTexture = SDL_CreateTextureFromSurface(renderer, gBackground);
     SDL_FreeSurface(gBackground);
 
-  //  SDL_Surface *puntosVidaDisparo = NULL;
-  //  puntosVidaDisparo = SDL_LoadBMP("../Imagenes/PuntosVidaDisparo.bmp");
-    //SDL_Texture *puntosVidaDisparoTexture = SDL_CreateTextureFromSurface(renderer, puntosVidaDisparo);
+   JugadorPlantilla *thisPlayer = NULL;
+   thisPlayer = (JugadorPlantilla *)malloc(sizeof(JugadorPlantilla));
+   thisPlayer->nombre = jugador;
+   thisPlayer->posX = 0;
+   thisPlayer->posY = 0;
+   thisPlayer->kilometro = 0.0f;
+   thisPlayer->velocidad = velocidades[1];
+   thisPlayer->vidas = 3;
+   thisPlayer->puntos = 0;
 
-    thisplayer = SDL_LoadBMP(texturasJugadores[jugador]);
-    SDL_Texture *luigiTexture = SDL_CreateTextureFromSurface(renderer, thisplayer);
-    SDL_FreeSurface(thisplayer);
 
-    SDL_Rect playerPos;
-    playerPos.x = 305;
-    playerPos.y = 500;
-    playerPos.w = 28 * 2;
-    playerPos.h = 30 * 2;
+   thisPlayer->image = SDL_LoadBMP(texturasJugadores[jugador]);
+   thisPlayer->texture = SDL_CreateTextureFromSurface(renderer, thisPlayer->image);
+   SDL_FreeSurface(thisPlayer->image);
 
-    SDL_Rect playerSprite;
-    playerSprite.x = 29;
-    playerSprite.y = 0;
-    playerSprite.w = 28;
-    playerSprite.h = 30;
+    thisPlayer->position.x = posicionesXiniciales[jugador];
+    thisPlayer->position.y = 500;
+    thisPlayer->position.w = 28 * 2;
+    thisPlayer->position.h = 30 * 2;
+
+    thisPlayer->playerSprite.x = 29;
+    thisPlayer->playerSprite.y = 0;
+    thisPlayer->playerSprite.w = 28;
+    thisPlayer->playerSprite.h = 30;
+
 
     SDL_Rect backgroundPos;
     backgroundPos.x = 0;
@@ -58,97 +64,111 @@ bool gameInit(SDL_Window *window, SDL_Renderer *renderer, int jugador) {
 
     int gameOver = 0;
     while (!gameOver) {
-
         cJSON *json = NULL;
         json = cJSON_CreateObject();
         cJSON *jugadorJSON = NULL;
         jugadorJSON = cJSON_CreateObject();
 
-        cJSON_AddNumberToObject(jugadorJSON, "posX", playerPos.x);
-        cJSON_AddNumberToObject(jugadorJSON, "Km", kilometro);
+        cJSON_AddNumberToObject(jugadorJSON, "posX", thisPlayer->position.x);
+        cJSON_AddNumberToObject(jugadorJSON, "Km", thisPlayer->kilometro);
         cJSON_AddBoolToObject(jugadorJSON,"Disparo",true);
-        cJSON_AddNumberToObject(jugadorJSON, "vidas", vidas);
-        cJSON_AddNumberToObject(jugadorJSON, "puntos", puntos);
+        cJSON_AddNumberToObject(jugadorJSON, "vidas", thisPlayer->vidas);
+        cJSON_AddNumberToObject(jugadorJSON, "puntos", thisPlayer->puntos);
 
-    //    printf("%s\n", cJSON_Print(jugadorJSON));
 
         cJSON_AddItemToObject(json,jugadoresNombre[jugador], jugadorJSON);
 
         char *str = cJSON_Print(json);
-   //     printf("%s\n", str);
         char *respuesta = makeRequest(false, str);
         printf("%s-> %s\n",jugadoresNombre[jugador], respuesta);
 
         cJSON *jsonRespuesta = cJSON_Parse(respuesta);
 
-
         printf("->>>>>%s\n", cJSON_Print(jsonRespuesta));
 
-//        cJSON *Hueco;
-//        Hueco = cJSON_GetObjectItem(jsonRespuesta, "Hueco");
-//
-//        printf("%s\n", cJSON_Print(Hueco));
-//
-//        cJSON *posYHueco;
-//        posYHueco = cJSON_GetObjectItem(Hueco, "kilometro");
-//
-//        char *stRRR = cJSON_Print(Hueco);
-//        printf("hueco->%.2f\n", posYHueco->valuedouble);
 
-
-        cJSON *jugadorRespuesta;
         cJSON *jugadoresLista = cJSON_GetObjectItem(jsonRespuesta,"listaJugadores");
         cJSON *head;
         listaEnalzadaJugadores = crearLista(listaEnalzadaJugadores);
         head = cJSON_GetObjectItem(jugadoresLista, "head");
 
-
-     //   print_list(listaEnalzadaJugadores);
-
-     //   printf("%s\n", cJSON_Print(jugadoresLista));
+        while(head!=NULL){
+            jugadorTemp = cJSON_GetObjectItem(head, "nombre")->valueint;
+            posXTemp = cJSON_GetObjectItem(head, "posX")->valueint;
+            kilometroTemp = cJSON_GetObjectItem(head, "Km")->valuedouble;
+            vidasTemp = cJSON_GetObjectItem(head, "vidas")->valueint;
+            puntosTemp = cJSON_GetObjectItem(head, "puntos")->valueint;
+            listaEnalzadaJugadores = actualizarLista(listaEnalzadaJugadores, jugadorTemp,
+                                                     posXTemp, kilometroTemp,false,
+                                                     vidasTemp, puntosTemp);
+            head = cJSON_GetObjectItem(head, "nextJugador");
+        }
+        print_list(listaEnalzadaJugadores);
 
         SDL_SetRenderDrawColor(renderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
         SDL_RenderClear(renderer);
 
-
-        backgroundPos.y += velocidad;
+        backgroundPos.y += thisPlayer->velocidad;
         if (backgroundPos.y > 6000) {
            backgroundPos.y = 0;
         }
 
-        if (playerPos.x > 750) {
-            playerPos.x = 750;
+        if (thisPlayer->position.x > 750) {
+            thisPlayer->position.x = 750;
             derecha = false;
-            playerSprite.x = 29;
-        } else if (playerPos.x < 310) {
-            playerPos.x = 310;
+            thisPlayer->playerSprite.x = 29;
+        } else if (thisPlayer->position.x < 310) {
+            thisPlayer->position.x = 310;
             izquierda = false;
-            playerSprite.x = 29;
+            thisPlayer->playerSprite.x = 29;
         }
-
-        JugadoresLista *aux = listaEnalzadaJugadores->nextNode;
-
-
-        if (aux->jugador!=jugador){
-                printf("pintando jugador %d\n", aux->jugador);
-
-                jugadorPostemp.x = aux->posX;
-                jugadorPostemp.y = 500;
-                jugadorPostemp.w = 28 * 2;
-                jugadorPostemp.h = 30 * 2;
-
-                SDL_RenderCopy(renderer, jugadorTexture, &jugadorSpritetemp, &jugadorPostemp);
-            }
-
+        JugadoresLista *aux = listaEnalzadaJugadores;
 
         SDL_RenderCopy(renderer, gBackgroundTexture, &backgroundPos, NULL);
-        SDL_RenderCopy(renderer, luigiTexture, &playerSprite, &playerPos);
-        //SDL_RenderCopy(renderer, puntosVidaDisparoTexture, NULL,NULL);
+
+        while (aux != NULL){
+            if (aux->jugador != jugador) {
+                printf("pintando jugador %d en %d\n", aux->jugador,aux->posX);
+                JugadorPlantilla *jugadorPlantillaTemp;
+                jugadorPlantillaTemp = (JugadorPlantilla *) malloc(sizeof(JugadorPlantilla));
+                jugadorPlantillaTemp->nombre = aux->jugador;
+                jugadorPlantillaTemp->posX = aux->posX;
+                jugadorPlantillaTemp->posY = 500;
+                jugadorPlantillaTemp->kilometro = aux->kilometro;
+                jugadorPlantillaTemp->velocidad = 0;
+                jugadorPlantillaTemp->vidas = aux->vidas;
+                jugadorPlantillaTemp->puntos = aux->puntos;
+
+                jugadorPlantillaTemp->playerSprite.x = 29;
+                jugadorPlantillaTemp->playerSprite.y = 0;
+                jugadorPlantillaTemp->playerSprite.w = 28;
+                jugadorPlantillaTemp->playerSprite.h = 30;
+
+                jugadorPlantillaTemp->position.x = aux->posX;
+                jugadorPlantillaTemp->position.y = 500;
+                jugadorPlantillaTemp->position.w = 28*2;
+                jugadorPlantillaTemp->position.h = 30*2;
+
+                jugadorPlantillaTemp->image = SDL_LoadBMP(texturasJugadores[aux->jugador]);
+                jugadorPlantillaTemp->texture = SDL_CreateTextureFromSurface(renderer,
+                                                                             jugadorPlantillaTemp->image);
+                SDL_FreeSurface(jugadorPlantillaTemp->image);
+
+                SDL_RenderCopy(renderer, jugadorPlantillaTemp->texture,
+                               &jugadorPlantillaTemp->playerSprite, &jugadorPlantillaTemp->position);
+
+                free(jugadorPlantillaTemp);
+
+
+            }
+            aux = aux->nextNode;
+        }
+
+
+
+        SDL_RenderCopy(renderer, thisPlayer->texture, &thisPlayer->playerSprite, &thisPlayer->position);
         SDL_RenderPresent(renderer);
         SDL_PollEvent(&event);
-
-
-
 
         switch (event.type) {
 
@@ -162,30 +182,34 @@ bool gameInit(SDL_Window *window, SDL_Renderer *renderer, int jugador) {
                         gameOver = 1;
                         break;
                     case SDLK_LEFT:
-                        playerSprite.x = 0;
+                        thisPlayer->playerSprite.x = 0;
                         izquierda = true;
                         derecha = false;
                         break;
                     case SDLK_RIGHT:
-                        playerSprite.x = 58;
+                        thisPlayer->playerSprite.x = 58;
                         izquierda = false;
                         derecha = true;
                         break;
                     case SDLK_UP:
-                        playerSprite.x = 29;
+                        thisPlayer->playerSprite.x = 29;
                         derecha = false;
                         izquierda = false;
-                        velocidad = velocidades[2];
+                        thisPlayer->velocidad = velocidades[1];
                         break;
                     case SDLK_DOWN:
-                        playerSprite.x = 29;
+                        thisPlayer->playerSprite.x = 29;
                         derecha = false;
                         izquierda = false;
-                        velocidad = velocidades[0];
+                        thisPlayer->velocidad = velocidades[0];
+                        break;
+                    case SDLK_SPACE:
+                        thisPlayer->velocidad = velocidades[2];
                         break;
 
+
                     default:
-                        playerSprite.x = 29;
+                        thisPlayer->playerSprite.x = 29;
                         break;
                 }
             default:
@@ -194,28 +218,25 @@ bool gameInit(SDL_Window *window, SDL_Renderer *renderer, int jugador) {
         }
 
 
-        if (derecha and velocidad!=0) {
-            playerPos.x += 10;
+        if (derecha and thisPlayer->velocidad!=0) {
+            thisPlayer->position.x += 10;
         }
-        if (izquierda and velocidad!=0) {
-            playerPos.x -= 10;
+        if (izquierda and thisPlayer->velocidad!=0) {
+            thisPlayer->position.x -= 10;
         }
 
-        if (velocidad == velocidades[1]) {
-            kilometro+= 0.0005f;
+        if (thisPlayer->velocidad == velocidades[1]) {
+            thisPlayer->kilometro += 0.0005f;
         }
-        if (velocidad == velocidades[2]) {
-            kilometro+= 0.001f;
+        if (thisPlayer->velocidad == velocidades[2]) {
+            thisPlayer->kilometro+= 0.001f;
         }
 
         if (puntosCounter < 0) {
             puntosCounter = 333;
-            puntos++;
+            thisPlayer->puntos++;
         }
         puntosCounter--;
-       // printf("%d\n",puntosCounter);
-     //   printf("%f\n", kilometro);
-
 
         SDL_Delay(30);
 
@@ -226,10 +247,4 @@ bool gameInit(SDL_Window *window, SDL_Renderer *renderer, int jugador) {
     SDL_Quit();
 
     exit(0);
-}
-
-bool loadMedia() {
-
-
-    return true;
 }

@@ -8,7 +8,8 @@
 #include <stdbool.h>
 #include <stdbool.h>
 #include<winsock2.h>
-#pragma comment(lib,"ws2_32.lib") //Winsock Library
+//#pragma comment(lib,"ws2_32.lib") //Winsock Library
+#include "winsock2.h"
 #include <pthread.h>
 #include <stdio.h>
 /***
