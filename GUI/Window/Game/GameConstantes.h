@@ -38,6 +38,7 @@ int puntosTemp = 0;
 int puntosCounterTemp = 0;
 
 
+
 /***
  * Nombre para los jugadores
  */
